@@ -1,4 +1,6 @@
 import './App.css';
+import MapView from './components/MapView';
+import pois from './data/pois';
 
 function App() {
   return (
@@ -20,10 +22,7 @@ function App() {
         <button disabled aria-disabled="true">Notificaciones</button>
       </nav>
       <main>
-        {/* MapView will go here */}
-        <div className="map-placeholder">
-          [Vista de mapa aquí]
-        </div>
+        <MapView pois={pois} />
       </main>
       <footer>
         {/* Placeholder for footer */}
