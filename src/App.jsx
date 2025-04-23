@@ -1,6 +1,7 @@
 import './App.css';
-import MapView from './components/LeafletMapView';
-import pois from './data/pois';
+// import MapView from './components/OpenLayersMapView';
+import MapView from './components/LeafletMapView.jsx';
+import mockPOIs from './data/mockPOIs';
 
 import ListaUsuarios from './components/ListaUsuarios.jsx';
 
@@ -23,7 +24,7 @@ function App() {
         <button disabled aria-disabled="true">Notificaciones</button>
       </nav>
       <main>
-        <MapView pois={pois} />
+        <MapView pois={mockPOIs} />
       </main>
       <footer>
         {/* Placeholder for footer */}
