@@ -256,6 +256,27 @@ export default MapView;
 
 ---
 
+## Estado actual (2025-04-23)
+
+- PoC de OpenLayers implementado en `OpenLayersMapView.jsx` usando datos mock de Mendoza.
+- LeafletMapView sigue disponible para comparación.
+- No se utiliza MapService ni tests automáticos en esta etapa.
+- Documentación enfocada en decisiones y hallazgos, no en detalles de código.
+
+## Decisiones
+
+- Prototipado directo en componentes React.
+- Alternancia manual entre implementaciones en `App.jsx`.
+- Se prioriza la exploración y validación visual.
+
+## Próximos pasos
+
+- Evaluar experiencia y performance.
+- Decidir si se avanza con OpenLayers o se explora Mapbox GL JS.
+- Documentar hallazgos y aprendizajes.
+
+---
+
 ## **13. References**
 
 - [OpenLayers Documentation](https://openlayers.org/en/latest/doc/)

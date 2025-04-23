@@ -1,0 +1,480 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Description,Environment,Watchers,Watchers,Watchers,Watchers Id,Watchers Id,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Inward issue link (Blocks),Outward issue link (Blocks),Outward issue link (Blocks),Outward issue link (Blocks),Outward issue link (Blocks),Attachment,Attachment,Custom field (Actual end),Custom field (Actual start),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Development),Custom field (Epic Color),Custom field (Epic Name),Custom field (Epic Status),Custom field (Goals),Custom field (Impact),Custom field (Issue color),Custom field (Locked forms),Custom field (Open forms),Custom field (Project overview key),Custom field (Project overview status),Custom field (Rank),Custom field (Request Type),Custom field (Sentiment),Sprint,Custom field (Start date),Custom field (Story Points),Custom field (Story point estimate),Custom field (Submitted forms),Custom field (Target end),Custom field (Target start),Custom field (Team),Custom field (Total forms),Custom field (Vulnerability),Custom field ([CHART] Date of First Response),Custom field ([CHART] Time in Status),Comment,Comment,Comment,Parent,Parent summary,Status Category,Status Category Changed
+Sistema de Sugerencias,SCRUM-59,10143,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,florencia cobos,712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:55 PM,22/Apr/25 9:56 PM,,,,0,"h3. Objetivo
+
+* Funcion para obtener 3 lugares de cada interes
+
+h3. Pasos principales
+
+* [ ] …  
+* [ ] …
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0005j:,,,Sprint 2,,,,,,,,,,,,,,,10049,🔍 Integrar busqueda y filtrado,To Do,22/Apr/25 8:55 PM
+Vista de Sugerencias,SCRUM-58,10142,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,florencia cobos,712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:52 PM,22/Apr/25 9:56 PM,,,,0,"h3. Objetivo
+
+* Vista de sugerencias segun los gustos del usuario
+
+h3. Pasos principales
+
+# Realizar el DOM para listar lugares que podrian gustarle al usuario segun sus intereseses
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0005b:,,,Sprint 2,,,,,,,,,,,,,,,10052,⚠️ Interacciones con el usuario,To Do,22/Apr/25 8:52 PM
+Dar Pronostico del clima,SCRUM-57,10141,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:51 PM,22/Apr/25 9:18 PM,,,,0,"h3. Objetivo
+
+* Puede ser direccionar a la pagina de la API o hacer una vista propia para dar el pronostico, (ver luego)
+
+h3. Pasos principales
+
+* [ ] …  
+* [ ] …
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001l:xr,,,Sprint 4,,,,,,,,,,,,,,,10048,🗺️ Integrar los mapas a la app,To Do,22/Apr/25 8:51 PM
+Integrar el clima al mapa,SCRUM-56,10140,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:49 PM,22/Apr/25 9:18 PM,,,,0,"h3. Objetivo
+
+* Agregar a la vista del mapa el circulito con el clima actual
+
+h3. Pasos principales
+
+* Agregar a la vista del mapa el circulito con el clima actual
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001l:xi,,,Sprint 4,,,,,,,,,,,,,,,10048,🗺️ Integrar los mapas a la app,To Do,22/Apr/25 8:49 PM
+Coneccion api de clima,SCRUM-55,10139,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:47 PM,22/Apr/25 9:18 PM,,,,0,"h3. Objetivo
+
+* Buscar una API de clima y conectarla al proyecto
+
+h3. Pasos principales
+
+* [ ] …  
+* [ ] …
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001l:x,,,Sprint 4,,,,,,,,,,,,,,,10048,🗺️ Integrar los mapas a la app,To Do,22/Apr/25 8:47 PM
+Compartir lugares,SCRUM-54,10138,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:42 PM,22/Apr/25 9:18 PM,,,,0,"h3. Objetivo
+
+* Funcionalidad de generacion de la url para compartir un lugar
+
+h3. Pasos principales
+
+# No se como se hace esto
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001l:w,,,Sprint 4,,,,,,,,,,,,,,,10050,ℹ️ Integrar solicitudes del usuario,To Do,22/Apr/25 8:42 PM
+Vista de lugares Visitados,SCRUM-53,10137,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:18 PM,22/Apr/25 9:56 PM,,,,0,"h3. Objetivo
+
+Vista de lugares visitados donde se podra ver una lista de los lugares visitados del usuario
+
+h3. Pasos principales
+
+# DOM para mostras la lista de lugares visitados de ese usuario (vinculado a la vista del lugar)
+# Posibilidad de eliminar lugares visitados
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00047:,,,Sprint 2,,,,,,,,,,,,,,,10132,Integracion de lugares,To Do,22/Apr/25 8:18 PM
+Vista de lugares Favoritos,SCRUM-52,10136,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:18 PM,22/Apr/25 9:56 PM,,,,0,"h3. Objetivo
+
+Vista de lugares favoritos donde se podra ver una lista de los lugares favoritos del usuario
+
+h3. Pasos principales
+
+# DOM para mostras la lista de lugares favoritos de ese usuario (vinculado a la vista del lugar)
+# Posibilidad de eliminar lugares favoritos
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0003z:,,,Sprint 2,,,,,,,,,,,,,,,10132,Integracion de lugares,To Do,22/Apr/25 8:18 PM
+Sistema de Visitados,SCRUM-51,10135,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:08 PM,22/Apr/25 9:00 PM,,,,0,"h3. Objetivo
+
+* Codigo para agregar, eliminar y obtener lugares visitados de un usuario  y que lo pueda ver luego en la vista de sus lugares visitados
+
+h3. Pasos principales
+
+* Funcionalidad al tocar el boton (funcion, no el boton), agregare el registro a visita con id usuario e id lugar
+* Funcionalidad de eliminar lugar visitado
+* Funcionalidad de obtener lista de lugares visitados
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001k:r,,,Sprint 2,,,,,,,,,,,,,,,10049,🔍 Integrar busqueda y filtrado,To Do,22/Apr/25 8:08 PM
+Sistema de Favoritos,SCRUM-50,10134,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:07 PM,22/Apr/25 8:59 PM,,,,0,"h3. Objetivo
+
+* Codigo para agregar, eliminar y obtener un lugar favorito de un usuario y que lo pueda ver luego en la vista de sus lugares favoritos
+
+h3. Pasos principales
+
+* Funcionalidad al tocar el boton (no programar el boton, solo la funcion), agregare el registro a favorito con id usuario e id lugar
+* Funcionalidad para eliminar
+* Funcionalidad para obtener los lugares favoritos
+
+h3. Entregables & DoD
+
+* Resultado esperado (código, script, archivo, comentario en Story, etc.).
+
+* Checklist rápido (tests pasan, commit referenciado al ticket, MR abierto, etc.).",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001k:i,,,Sprint 2,,,,,,,,,,,,,,,10049,🔍 Integrar busqueda y filtrado,To Do,22/Apr/25 8:07 PM
+Vista de lugar,SCRUM-49,10133,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:05 PM,22/Apr/25 9:56 PM,,,,0,"h3. Objetivo
+
+Programar la vista de lugar (al apretarlo en el mapa o buscar un lugar)
+
+h3. Pasos principales
+
+# Estructura General (Titulo, descripcion, la calificacion, telefono, email, etc)
+# Hacer el DOM de las categorias del lugar
+# Hacer carrusel de fotos mostrando la foto principal 1ro
+# Hacer DOM de horarios
+# Botones para favorito, y lugar visitado
+# Lugar para Comentarios
+# Boton compartir
+
+h3. Entregables & DoD
+
+* Codigo de vista y redireccion nada mas sin funcionalidades",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001q:,,,Sprint 2,,,,,,,,,,,,,,,10132,Integracion de lugares,To Do,22/Apr/25 8:05 PM
+Integracion de lugares,SCRUM-48,10132,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,22/Apr/25 8:05 PM,22/Apr/25 8:05 PM,,,,0,"h3. Objetivo
+
+* Breve frase que describa el “por qué” de la tarea.
+
+h3. Contexto
+
+* Enlace al épico / requisito asociado.  
+* Decisiones previas que condicionan la tarea.  
+* Supuestos que el desarrollo debe tener presentes.
+
+h3. Alcance
+
+* Qué se hará y *qué queda explícitamente fuera*.
+
+h3. Criterios de aceptación
+
+* [AC‑1] …  
+* [AC‑2] …
+
+h3. Entregables
+
+* Artefactos (código, documentación, pruebas) y dónde quedarán.
+
+h3. Definición de Hecho (DoD)
+
+* Checklist que asegura calidad y trazabilidad (tests, cobertura, revisión de código, actualización de documentación, etc.).
+
+h3. Referencias
+
+* Requisitos (FR / NFR).  
+* Decisiones (DL‑xx).  
+* Documentos adicionales.
+
+",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0003r:,,,,,,,,,,,,,,,,,,,,To Do,22/Apr/25 8:05 PM
+Carga de datos,SCRUM-47,10106,Task,In Progress,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,16/Apr/25 10:11 PM,21/Apr/25 9:55 PM,,,,0,"En base a los datos entregados por [~accountid:712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b] en [https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-14|https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-14|smart-link]  realizar un .csv para la carga de la bd
+
+Para esto hay que formatear y unificar los datos, voy a ir dejando los avances en este sheets [https://docs.google.com/spreadsheets/d/1btn7dQXLJ2Kd-WJVJ5wfWpA1MdF2ZP_ujZiWFZkw4hM/edit?usp=sharing|https://docs.google.com/spreadsheets/d/1btn7dQXLJ2Kd-WJVJ5wfWpA1MdF2ZP_ujZiWFZkw4hM/edit?usp=sharing|smart-link] 
+
+Ademas hay que subir las imagenes al storage de supabase o integrarlas en el proyecto",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i00036:zv,,,Sprint 1,,,,,,,,,,,,,,,10067,🗃️ Creacion de base de datos,In Progress,16/Apr/25 10:11 PM
+Creacion Carpeta `llm-context` Integrada Al Proyecto,SCRUM-46,10105,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,16/Apr/25 5:18 PM,16/Apr/25 5:34 PM,16/Apr/25 5:33 PM,16/Apr/25 5:33 PM,,0,"h3. Brief
+
+* Se identificó una necesidad de tener una fuente central de conocimientos para la facil integración de herramientas de LLM. (GPT, Sonnet, Gemini …)
+* La carpeta debe centralizar los conocimientos del resto de artefactos. 
+* Presentarse como un “Single Source of Truth”. 
+* Esto facilitará futuras estimaciones e integraciones ya que debe estar centrado en diagramas y textos human-readable. (Markdown/MermaidDiagrams)
+
+
+
+h3. Entregables
+
+* Carpeta DENTRO del repositorio llamada {{llm-context}}
+* Contenidos de la carpeta en formato de archivos desestructurados o shallow data al estilo vault de Obsidian. Tanto las personas como las LLM puedan usar para queries internas.",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|hzzzzl:xi,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_12665_*|*_10001_*:*_1_*:*_0,16/Apr/25 5:34 PM;604a3dea58aa8d00722ac5f8;Quedó integrado en la rama [https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-26|https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-26|smart-link] ,,,10054,📜 Creacion de artefactos y documentacion,Done,16/Apr/25 5:33 PM
+Creacion de la bd,SCRUM-45,10104,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,16/Apr/25 4:52 PM,16/Apr/25 9:07 PM,16/Apr/25 4:59 PM,16/Apr/25 9:07 PM,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00036:zi,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_11521909_*|*_10001_*:*_1_*:*_0,,,,10067,🗃️ Creacion de base de datos,Done,16/Apr/25 9:07 PM
+Conexion de Base de datos,SCRUM-44,10103,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,16/Apr/25 4:52 PM,16/Apr/25 9:48 PM,,16/Apr/25 9:48 PM,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00036:zr,,,Sprint 1,,,,,,,,,,,10000_*:*_2_*:*_15325392_*|*_10001_*:*_2_*:*_15112,,,,10067,🗃️ Creacion de base de datos,Done,16/Apr/25 9:48 PM
+Vistas de log in,SCRUM-43,10102,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Miguel Alvarez,712020:ed10e9de-d6f2-4eb3-95de-41f09a4c85b1,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,16/Apr/25 4:40 PM,22/Apr/25 7:11 PM,,22/Apr/25 7:11 PM,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00008:,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_527434178_*|*_10002_*:*_1_*:*_0,,,,10053,👤 Integracion de sistema de usuarios,Done,22/Apr/25 7:11 PM
+Vista de registro,SCRUM-42,10101,Task,In Progress,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,Miguel Alvarez,712020:ed10e9de-d6f2-4eb3-95de-41f09a4c85b1,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,16/Apr/25 4:40 PM,22/Apr/25 7:11 PM,,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00005:,,,Sprint 1,,,,,,,,,,,,,,,10053,👤 Integracion de sistema de usuarios,In Progress,22/Apr/25 7:11 PM
+Vista del mapa,SCRUM-41,10100,Task,In Progress,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Highest,,Miguel Alvarez,712020:ed10e9de-d6f2-4eb3-95de-41f09a4c85b1,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,16/Apr/25 4:39 PM,22/Apr/25 7:11 PM,,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|hzzzzl:w,,,Sprint 1,,,,,,,,,,,,,,,10048,🗺️ Integrar los mapas a la app,In Progress,22/Apr/25 7:11 PM
+Diagrama de Flujo de inicio de sesion / registro,SCRUM-39,10081,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,14/Apr/25 3:25 PM,16/Apr/25 10:11 PM,,14/Apr/25 3:25 PM,,0,"!image-20250414-182550.png|width=1206,height=294,alt=""image-20250414-182550.png""!",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,14/Apr/25 3:26 PM;ed8dd922-c8fa-4fe5-99c8-385a5de32e3e;image-20250414-182550.png;https://turisteando-en-mendoza.atlassian.net/rest/api/3/attachment/content/10033,,,,,,,,,,,,,,,,,,0|hzzzzl:xv,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_430_*|*_10002_*:*_1_*:*_0,,,,10054,📜 Creacion de artefactos y documentacion,Done,14/Apr/25 3:25 PM
+"Instalar Git, NPM, Vite locally",SCRUM-38,10080,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,florencia cobos,712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 8:42 PM,13/Apr/25 8:46 PM,13/Apr/25 8:43 PM,13/Apr/25 8:46 PM,,0,"Esta tarea es para todos, pero como flor es la responsable de esta epica de creacion del proyecto, se le asigna a ella. TODOS DEBEN TENER NPM GIT Y GITHUB ACCOUNT para aportar codigo nuevo. sin mencionar las librerias que npm progresivamente irá pidiendo conforme crezca el proyecto.",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00036:x,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_199278_*|*_10002_*:*_1_*:*_0,,,,10077,"Git, Github, Versioning y Prototipado Inicial",Done,13/Apr/25 8:46 PM
+Invitar colaboradores Github,SCRUM-37,10079,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,florencia cobos,712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 8:41 PM,16/Apr/25 9:19 PM,13/Apr/25 8:41 PM,13/Apr/25 8:46 PM,,0,"Se requiere que el proyecto de github donde se verá el versioando y seguimiento del proyecto, tenga los colaboradores necesarios para que todos puedan introducir codigo nuevo en el repo remote.",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00036:y,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_276377_*|*_10002_*:*_1_*:*_0,,,,10077,"Git, Github, Versioning y Prototipado Inicial",Done,13/Apr/25 8:46 PM
+Iniciar Proyecto con Git,SCRUM-36,10078,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,florencia cobos,712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 8:40 PM,16/Apr/25 9:21 PM,13/Apr/25 8:40 PM,13/Apr/25 8:46 PM,,0,Se requiere inicialmente que algun integrante integre versionado del codigo del proyecto y se conecte con un github remote.,,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i00036:p,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_331981_*|*_10001_*:*_1_*:*_0,,,,10077,"Git, Github, Versioning y Prototipado Inicial",Done,13/Apr/25 8:46 PM
+"Git, Github, Versioning y Prototipado Inicial",SCRUM-35,10077,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 8:39 PM,13/Apr/25 8:39 PM,13/Apr/25 8:44 PM,,,0,,,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0003j:,,,,,,,,,,,,,,,,,,,,To Do,13/Apr/25 8:39 PM
+Autorización (Roles-Permisos),SCRUM-34,10076,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 8:03 PM,15/Apr/25 6:53 PM,13/Apr/25 8:30 PM,,,0,,,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,purple,,,,,0|i0001v:,,,Sprint 3,,,,,,,,,,,,,,,10053,👤 Integracion de sistema de usuarios,To Do,13/Apr/25 8:03 PM
+Profile View (Diseño),SCRUM-33,10075,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 7:47 PM,20/Apr/25 5:54 PM,13/Apr/25 7:53 PM,20/Apr/25 5:54 PM,,0,"Definir la vista de *Settings>Profile* de la aplicación. 
+
+La misma debe tener predefinido un alcance, objetivo definidos para que sea mas rapido. 
+
+(Tambien puede tratarse de tanto una pagina completa como un partial, ya sea una seccion o modal)",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,SCRUM-29,,,,,,,,,,,,,,,,,,purple,,,,,0|i00036:i,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_598016612_*|*_10002_*:*_1_*:*_0,,,,10051,🎨 Diseño de vistas,Done,20/Apr/25 5:54 PM
+Map View (Diseño),SCRUM-32,10074,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,High,Done,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 7:46 PM,20/Apr/25 3:54 PM,16/Apr/25 4:47 PM,20/Apr/25 3:54 PM,,0,"Definir la vista de *MAPA* de la aplicación. 
+
+La misma debe tener predefinido un alcance, objetivo definidos para que sea mas rapido. 
+
+----
+
+Esta es la vista mas compleja. definitivamente será una vista completa y no un modal, ya que es donde ocurrirán la mayoría de las acciones del usuario.",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,SCRUM-29,,,,,,,,,,,,,,,,,,purple,,,,,0|hzzzzl:xy,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_590873136_*|*_10002_*:*_1_*:*_0,,,,10051,🎨 Diseño de vistas,Done,20/Apr/25 3:54 PM
+Register View (Diseño),SCRUM-31,10073,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 7:46 PM,20/Apr/25 3:54 PM,13/Apr/25 7:51 PM,20/Apr/25 3:54 PM,,0,"Definir la vista de *Registro* de la aplicación. 
+
+La misma debe tener predefinido un alcance, objetivo definidos para que sea mas rapido. 
+
+(Tambien puede tratarse de tanto una pagina completa como un partial, ya sea una seccion o modal)",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,SCRUM-29,,,,,,,,,,,,,,,,,,purple,,,,,0|hzzzzl:xx,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_590888836_*|*_10002_*:*_1_*:*_0,,,,10051,🎨 Diseño de vistas,Done,20/Apr/25 3:54 PM
+Login View (Diseño),SCRUM-30,10072,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 7:45 PM,20/Apr/25 3:54 PM,23/Apr/25 12:59 AM,20/Apr/25 3:54 PM,,0,"Definir la vista de *Login* de la aplicación. 
+
+La misma debe tener predefinido un alcance, objetivo definidos para que sea mas rapido. 
+
+(Tambien puede tratarse de tanto una pagina completa como un partial, ya sea una seccion o modal)",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,SCRUM-29,,,,,,,,,,,,,,,,,,purple,,,,,0|hzzzzd:,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_590918551_*|*_10002_*:*_1_*:*_0,,,,10051,🎨 Diseño de vistas,Done,20/Apr/25 3:54 PM
+Wireframing & Figma Vistas Principales,SCRUM-29,10071,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,13/Apr/25 7:31 PM,23/Apr/25 1:27 AM,23/Apr/25 12:59 AM,20/Apr/25 5:08 PM,,0,"[https://www.figma.com/design/Byy9Mrmhf1SxX24o1F5AHt/Turisteando?node-id=24-42&p=f&t=Ovl9P7jjxp0FAnHf-0|https://www.figma.com/design/Byy9Mrmhf1SxX24o1F5AHt/Turisteando?node-id=24-42&p=f&t=Ovl9P7jjxp0FAnHf-0|smart-embed]
+
+ 
+
+Se requiere de un wireframe o figma básico de las vistas principales involucradas
+
+Las mismas vistas deben estar inspiradas en el branstorming incial que tuvimos.
+
+* Vista de Log-in y Registracion
+* Vista de inicio y mapa
+* Vista de perfil de usuario y preferencias
+* Settings page tab?
+* lo anterior son sugerencias ([~accountid:604a3dea58aa8d00722ac5f8])
+
+----
+
+h3. Entregables
+
+* Documento con los links de figma donde se vean los diseños de la aplicación. 
+* Doc de figma donde se vean las vistas que [~accountid:70121:921614ba-3e24-42c6-b37c-35b1389f9314] determine necesarias para cumplir con los objetivos del sprint 1.",,Emiliano Las Heras,,,604a3dea58aa8d00722ac5f8,,,,,,,,,,,,SCRUM-30,SCRUM-31,SCRUM-33,SCRUM-32,16/Apr/25 4:35 PM;ug:07ea5b0b-4b98-4ee4-9167-4bd6b771a5eb;image-20250416-193553.png;https://turisteando-en-mendoza.atlassian.net/rest/api/3/attachment/content/10039,23/Apr/25 1:27 AM;ug:07ea5b0b-4b98-4ee4-9167-4bd6b771a5eb;image-20250423-042733.png;https://turisteando-en-mendoza.atlassian.net/rest/api/3/attachment/content/10066,,,,,,,,,,,,purple,,,,,0|hzzzzh:,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_84567671_*|*_10001_*:*_1_*:*_0,16/Apr/25 4:22 PM;604a3dea58aa8d00722ac5f8;[~accountid:70121:921614ba-3e24-42c6-b37c-35b1389f9314] ponete el entregable del figma aca perrito,"16/Apr/25 4:35 PM;604a3dea58aa8d00722ac5f8;!image-20250416-193553.png|width=100%,alt=""image-20250416-193553.png""!","23/Apr/25 1:26 AM;604a3dea58aa8d00722ac5f8;Se agregan los palettes de figma y otras variables utiles al codigo. esta actualmente localizado en {{App.css}} en la rama [https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-2|https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-2|smart-link].
+
+!image-20250423-042733.png|width=782,height=648,alt=""image-20250423-042733.png""!",10051,🎨 Diseño de vistas,Done,20/Apr/25 5:08 PM
+Determinar contenido a mostrar en el mapa,SCRUM-28,10070,Task,In Progress,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,11/Apr/25 8:40 PM,23/Apr/25 1:28 AM,23/Apr/25 1:29 AM,,,0,"h3. Objetivo
+
+* Especificar qué capas y categorías de información (POI) aparecerán en el mapa del MVP.
+
+h3. Contexto
+
+* Dominio definido en el modelo: {{PointOfInterest}}, {{Attraction}}, {{Restaurant}}, etc.
+* Requisitos funcionales de filtrado y notificaciones.
+* Depende de investigación previa SCRUM-14 (lugares más atractivos).  
+
+h3. Alcance
+
+* *In scope*  
+** Seleccionar categorías iniciales de POI (historia, arte, gastronomía, naturaleza).  
+** Definir atributos mínimos por categoría (nombre, lat, lng, descripción corta, icono).  
+** Determinar fuentes de datos abiertas (Open Data Mendoza, Google Places).  
+* *Out of scope*  
+** Scraping/import real de datos (cubierto en futuros tickets).  
+
+h3. Criterios de aceptación
+
+* [AC-1] Lista de categorías y esquema de datos en {{docs/data/poi-schema.md}}.  
+* [AC-2] Mapeo Category → Icono (SVG/PNG) con licencia válida.  
+* [AC-3] Tabla de fuentes de datos con URL y tipo de licencia.  
+
+h3. Entregables
+
+* Documento de esquema + icon mapping.  
+* JSON de ejemplo ({{sample-pois.json}}) con algunos POI por categoría.  
+
+h3. Definición de Hecho (DoD)
+
+*  Story movida a “Done”.",,Magui Cobos,,,70121:921614ba-3e24-42c6-b37c-35b1389f9314,,,,,,,,,,,SCRUM-14,,,,,,,,,,,,,,,,,,,,,,,0|hzzzzl:g,,,Sprint 1,,,,,,,,,,,,,,,10048,🗺️ Integrar los mapas a la app,In Progress,23/Apr/25 1:28 AM
+Determinar el tipo de layout del mapa,SCRUM-27,10069,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,11/Apr/25 8:40 PM,23/Apr/25 12:33 AM,22/Apr/25 11:35 PM,,,0,"h3. Objetivo
+
+* Definir la disposición (layout), tema y paleta visual del componente de mapa para asegurar coherencia con el diseño global de la app.
+
+h3. Contexto
+
+* Colaboración directa con @Magui Cobos (UI).  
+* Stack React + Vite + PWA, móvil-first Android. 
+* Deberá integrarse con el {{MapView}} basado en OpenLayers
+
+h3. Alcance
+
+* *Out of scope*  
+** Implementación CSS definitiva (se hará en otro ticket).  
+** Animaciones avanzadas.
+
+h3. Criterios de aceptación
+
+* [AC-1] Documento {{docs/ui/map-layout-guidelines.md}} con mockups y rationale.  
+* [AC-2] Aprobación de UI-lead (Magui) y PO. 
+* [AC-3] Story vinculada a Requirement FR-1 (mapa interactivo).
+
+h3. Entregables
+
+* Mockups (PNG/SVG) enlazados.  
+* Guía de estilos Markdown.  
+
+h3. Definición de Hecho (DoD)
+
+* Mockups revisados y aceptados.  
+* Guía de estilos mergeada en {{main}}. 
+* Story movida a “Done”.",,Magui Cobos,,,70121:921614ba-3e24-42c6-b37c-35b1389f9314,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0000b:i,,,Sprint 1,,,,,,,,,,,,,,,10048,🗺️ Integrar los mapas a la app,To Do,11/Apr/25 8:40 PM
+Determinar la api de mapas,SCRUM-26,10068,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Highest,Done,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,11/Apr/25 8:39 PM,22/Apr/25 11:22 PM,22/Apr/25 11:15 PM,22/Apr/25 11:22 PM,,0,"h3. Objetivo
+
+* Seleccionar y justificar la librería/servicio de mapas que usará la aplicación.
+
+h3. Contexto  
+
+* Requisitos relacionados:  
+** Mostrar un mapa interactivo con geolocalización.
+** Usar herramientas open‑source para ajustarnos al presupuesto.
+* Decisión previa: Orientar el stack a *React + Vite PWA*, móvil‑first Android.
+
+h3. Alcance
+
+* *In scope*  
+** Investigar 3‑5 opciones (Leaflet, React‑Leaflet, OpenLayers, MapLibre GL JS, Cesium/MapTiler 3D).  
+** Evaluar cada opción en términos de: licencia, costo, soporte 3D/terreno, integración con React, comunidad, peso del bundle y facilidad de personalización.  
+** Crear matriz comparativa y recomendación final.  
+** Construir PoC mínima que:  
+*** Renderice mapa base de Mendoza.  
+*** Muestre posición GPS simulada.  
+*** Plotee un marcador de prueba.
+* *Out of scope*  
+** Estilos definitivos del mapa.  
+** Persistencia de datos reales de puntos de interés.  
+
+h3. Criterios de aceptación
+
+* Matriz comparativa adjunta al ticket y versionada en {{docs/evaluations/maps-api.md}}.  
+* PoC ejecutable con {{npm run maps-poc}} (branch {{SCRUM-26-maps-api-poc}}).  
+* Justificación escrita de la API elegida y registro en {{llm-context/decision-log.md}} siguiendo el template DL.  
+* Revisión de código aprobada por al menos 1 integrante del equipo.  
+
+h3. Entregables
+
+* Archivo Markdown con la matriz y la recomendación.  
+* Código PoC dentro de {{src/poc/maps/}}.  
+
+h3. Definición de Hecho (DoD)
+
+* [ ] Tests básicos de render del mapa pasan
+* [ ] Lint y formato sin errores.  
+* [ ] Documentación generada y enlazada.  
+
+h3. Referencias
+
+* Requisitos funcionales y no funcionales (requirements.md).
+* Decision Log para registrar la elección final. 
+* Domain Model (relación con entidad {{PointOfInterest}}). ",,Emiliano Las Heras,Magui Cobos,,604a3dea58aa8d00722ac5f8,70121:921614ba-3e24-42c6-b37c-35b1389f9314,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|hzzzz5:,,,Sprint 1,,,,,,,,,,2025-04-23 02:21:02.458,10000_*:*_1_*:*_172686145_*|*_10001_*:*_1_*:*_0,"22/Apr/25 11:21 PM;604a3dea58aa8d00722ac5f8;{panel:bgColor=#e3fcef}
+Entregables alcanzados:
+
+* PoC dentro de {{App.jsx}} y {{components/LeafletMapView}}
+* archivo markdown con la matriz y recomendacion en {{llm-context/Custom Map View using OpenLayers or Mapbox GL JS.md}}
+{panel}","22/Apr/25 11:22 PM;604a3dea58aa8d00722ac5f8;Por una confusión, parte de los entregables de otras tareas, (incluyendo la creacion de llm-context) fueron enviados en esta rama del mismo nombre. no lo ejecuté bien. dejo este comentario como constancia del hecho.",,10048,🗺️ Integrar los mapas a la app,Done,22/Apr/25 11:22 PM
+🗃️ Creacion de base de datos,SCRUM-25,10067,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,11/Apr/25 8:36 PM,16/Apr/25 4:14 PM,13/Apr/25 8:07 PM,,09/May/25 12:00 AM,0,,,Magui Cobos,,,70121:921614ba-3e24-42c6-b37c-35b1389f9314,,,,,,,,,,,,,,,,,,,,,,,,ghx-label-9,,,,,orange,,,,,0|i00039:,,,,13/Apr/25 12:00 AM,,,,,,,,,,,,,,,,To Do,11/Apr/25 8:36 PM
+Modelado de base de datos,SCRUM-24,10066,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Highest,Done,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,11/Apr/25 8:34 PM,16/Apr/25 10:14 PM,13/Apr/25 8:28 PM,14/Apr/25 3:01 PM,,0,"!image-20250417-011409.png|width=1358,height=907,alt=""image-20250417-011409.png""!",,Emiliano Las Heras,Magui Cobos,,604a3dea58aa8d00722ac5f8,70121:921614ba-3e24-42c6-b37c-35b1389f9314,,,,,,,,,,,SCRUM-15,,,,16/Apr/25 10:14 PM;ed8dd922-c8fa-4fe5-99c8-385a5de32e3e;image-20250417-011409.png;https://turisteando-en-mendoza.atlassian.net/rest/api/3/attachment/content/10043,,,,,,,,,,,,,,,,,,0|i00036:z,,,Sprint 1,,,,,,,,,,2025-04-13 23:01:24.871,10000_*:*_1_*:*_234014126_*|*_10002_*:*_1_*:*_1395746_*|*_10001_*:*_2_*:*_3789359,"13/Apr/25 8:01 PM;604a3dea58aa8d00722ac5f8; [~accountid:712020:4fc00f68-7eec-4a29-a801-219aa96aa54e]
+Probablemente convenga comenzar con los distintos artefactos de Modelado de Dominio de la aplicacion. En otras palabras, el UML que te dicta el *sistema de entidades, relaciones, atributos y funciones*.
+
+Mis sugerencias son:
+
+* *Entity Relationship Diagram (ERD)*. Atributos básicos. _ir actualizandolo conforme se actualicen los requerimientos de la aplicación._
+* *Class Diagram*. Si querés mappear metodos atributos y entidades completas. Por ahi el anterior está mejor para empezar mas rapido a prototipar.
+* Completementar con la  tarea [https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-12|https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-12|smart-link] en caso que se entreguen Diagramas de caso de uso y *comportamiento funcional*.
+* Complementar con tareas que generen Diagramas de Secuencia o similares de definición en cuanto a *orden temporal* de la aplicacion.",13/Apr/25 8:04 PM;604a3dea58aa8d00722ac5f8;Se linkea la tarea de definicion de prefs de usuario ya que está correlacionado con como se modelará el mismo en terminos de base de datos.,,10067,🗃️ Creacion de base de datos,Done,14/Apr/25 3:01 PM
+📜 Creacion de artefactos y documentacion,SCRUM-23,10054,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:50 PM,15/Apr/25 6:58 PM,13/Apr/25 8:29 PM,,09/May/25 12:00 AM,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,ghx-label-2,,,,,dark_yellow,,,,,0|i00037:,,,,13/Apr/25 12:00 AM,,,,,,,,,,,,,,,,To Do,08/Apr/25 9:50 PM
+👤 Integracion de sistema de usuarios,SCRUM-22,10053,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:49 PM,16/Apr/25 4:40 PM,16/Apr/25 4:45 PM,,24/May/25 12:00 AM,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,ghx-label-6,,,,,green,,,,,0|i0003a:2,,,,27/Apr/25 12:00 AM,,,,,,,,,,,,,,,,To Do,08/Apr/25 9:49 PM
+⚠️ Interacciones con el usuario,SCRUM-21,10052,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:45 PM,15/Apr/25 6:54 PM,13/Apr/25 8:13 PM,,06/Jun/25 12:00 AM,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,ghx-label-9,,,,,orange,,,,,0|i0003a:i,,,,25/May/25 12:00 AM,,,,,,,,,,,,,,,,To Do,08/Apr/25 9:45 PM
+🎨 Diseño de vistas,SCRUM-20,10051,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:45 PM,16/Apr/25 6:00 PM,16/Apr/25 4:47 PM,,25/Apr/25 12:00 AM,0,,,Emiliano Las Heras,Sebasti�n Cejas,,604a3dea58aa8d00722ac5f8,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,ghx-label-3,,,,,yellow,,,,,0|i0003a:,,,,13/Apr/25 12:00 AM,,,,,,,,,2025-04-13 22:26:36.202,,"13/Apr/25 7:26 PM;604a3dea58aa8d00722ac5f8;En esta epica se me ocurre que podríamos abarcar completamente el diseño de vistas en relación a sprint actual. Si el sprint actual habla de MAPAS y USUARIOS, podríamos empezar por esas vistas.
+
+h3. Sugerencias:
+
+* PREANALISIS. Definir las vistas de la aplicación (por lo menos del sprint actual). Por cada vista se debe definir:
+** Objetivo principal de la vista. (tomar inspiracion de las reuniones que hemos tenido y flujos principales de actividad de la aplicación que generamos del brainstorm inicial)
+** Alcance de la vista y restricciones de la vista. 
+** Parametros y dependencias de la vista
+* DISEÑO.
+** *aca normalmente se hablaría de un diseño macro de la aplicación,* es decir, probablemente convendría armar toda la documentación necesaria respecto a *como nos imaginamos que se verá la aplicación* en terminos de paletas de colores, cantidad de vistas, cantidad y complejidad de la información mostrada, estructura general y tipo de materiales y texturas deseadas, etc. [~accountid:70121:921614ba-3e24-42c6-b37c-35b1389f9314] contame si esta bien o mal planteado esto
+** Posteriormente, podríamos empezar a armar los *wireframes o figma* de las vistas. _Esto creo yo pero no se de diseño ni ux-ui, por lo que es una sugerencia nada mas._
+** Actualmente se me ocurre que serán necesarias vistas o secciones para:
+*** Homepage
+*** Login Page / modal
+*** Register Page / modal
+*** Map Page (donde ocurriría la mayoría del uso, correlacionado a la epica [https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-17|https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-17|smart-link])
+*** User Settings view
+*** … y más",,,,,To Do,08/Apr/25 9:45 PM
+ℹ️ Integrar solicitudes del usuario,SCRUM-19,10050,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:42 PM,22/Apr/25 8:57 PM,13/Apr/25 8:09 PM,,06/Jun/25 12:00 AM,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,ghx-label-8,,,,,dark_purple,,,,,0|i0003a:f,,,,11/May/25 12:00 AM,,,,,,,,,,,,,,,,To Do,08/Apr/25 9:42 PM
+🔍 Integrar busqueda y filtrado,SCRUM-18,10049,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:40 PM,22/Apr/25 8:58 PM,13/Apr/25 8:09 PM,,09/May/25 12:00 AM,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0003a:d,,,,27/Apr/25 12:00 AM,,,,,,,,,,,,,,,,To Do,08/Apr/25 9:40 PM
+🗺️ Integrar los mapas a la app,SCRUM-17,10048,Epic,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:39 PM,15/Apr/25 5:53 PM,16/Apr/25 4:40 PM,,10/May/25 12:00 AM,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,ghx-label-10,,,,,blue,,,,,0|i0003a:b,,,,13/Apr/25 12:00 AM,,,,,,,,,,,,,,,,To Do,08/Apr/25 9:39 PM
+Integrar Sistema Preferencias Usuario,SCRUM-15,10046,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:30 PM,15/Apr/25 6:52 PM,13/Apr/25 8:05 PM,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,SCRUM-24,,,,,,,,,,,,,,,,,,,,,,,0|i0001l:y,,,Sprint 2,,,,,,,,,,,,,,,10053,👤 Integracion de sistema de usuarios,To Do,08/Apr/25 9:30 PM
+Investigar lugares mas atractivos,SCRUM-14,10045,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Lowest,Done,florencia cobos,712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:29 PM,16/Apr/25 9:55 PM,13/Apr/25 7:39 PM,16/Apr/25 9:12 PM,,0,"*CATEGORIAS DEFINIDAS:*
+
+Sitios patrimoniales oficiales (monumentos, museos)  
+Bodegas históricas  
+Malls y Centros comerciales
+Lugares de esparcimiento (Parques, plazas, etc)
+Gastronomía
+Actividades recreativas (trekking,senderismo, rafting, paintball, parques aéreos, etc)
+
+*Cada una tendra la siguiente informacion:*
+
+* Categoría
+* Dirección
+* Teléfono
+* Correo Electrónico
+* Página Web
+* Horarios de Visita
+* Entrada
+* Recomendación
+* Fotos (link)
+
+*Link del documendo:*
+
+[https://docs.google.com/document/d/1aKlhoRRPOChUYhlSGIRUdcTOnwbepFLX4iKObfu5OrU/edit?tab=t.0#heading=h.d0p4yphzu2fg|https://docs.google.com/document/d/1aKlhoRRPOChUYhlSGIRUdcTOnwbepFLX4iKObfu5OrU/edit?tab=t.0#heading=h.d0p4yphzu2fg|smart-link] ",,Emiliano Las Heras,florencia cobos,Sebasti�n Cejas,604a3dea58aa8d00722ac5f8,712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,SCRUM-28,,,,,,,,,,,,,,,,,,,,,,0|hzzzzl:,,,Sprint 1,,,,,,,,,,2025-04-13 22:40:28.452,10000_*:*_2_*:*_509328601_*|*_10001_*:*_2_*:*_5160,"13/Apr/25 7:40 PM;604a3dea58aa8d00722ac5f8;Esto puede ser una *user story*, ojo. Hagamos un branstorm despues para ver que involucraria a nivel practico esta tarea de investigacion. y asi darle un  detalle mas claro y realista.","15/Apr/25 12:55 PM;712020:5e5876e0-69ec-4269-9ed2-5c77f38d407b;[~accountid:604a3dea58aa8d00722ac5f8] si emi, ahi hablamos x whatsapp e hicimos un filtro de que va a incluir  y la estructura que va a tener cada lugar (arriba esta mejor detallado). Tambien adjunte un documento para q vean los lugares y demas.",,10054,📜 Creacion de artefactos y documentacion,Done,16/Apr/25 9:12 PM
+Hacer el dragrama de gannt,SCRUM-13,10044,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Highest,Done,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Miguel Alvarez,712020:ed10e9de-d6f2-4eb3-95de-41f09a4c85b1,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:20 PM,16/Apr/25 10:11 PM,13/Apr/25 7:40 PM,15/Apr/25 6:56 PM,,0,,,Emiliano Las Heras,Sebasti�n Cejas,,604a3dea58aa8d00722ac5f8,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,13/Apr/25 7:43 PM;ug:07ea5b0b-4b98-4ee4-9167-4bd6b771a5eb;image-20250413-224309.png;https://turisteando-en-mendoza.atlassian.net/rest/api/3/attachment/content/10000,,,,,,,,,,,,,,,,,,0|hzzzzl:xr,,,Sprint 1,,,,,,,,,,2025-04-13 22:43:31.627,10000_*:*_1_*:*_596157841_*|*_10002_*:*_1_*:*_0,"13/Apr/25 7:43 PM;604a3dea58aa8d00722ac5f8;En este caso considero que se pueden hacer multiples enfoques. una es utilizar una herramienta de Gantts como Microsoft Project. La otra es que [~accountid:712020:ed10e9de-d6f2-4eb3-95de-41f09a4c85b1] esté particularmente pendiente y enfocado en revisar los ciclos de inicio y fin de cada tarea y que tengan sentido en la vista de “Timeline” de Jira, que arma un Gantt superficial de manera automática en relacion a los tickets del tablero.
+
+Adjunto un ejemplo. los que tienen un simbolo de warning son porque estan mal definidos los plazos temporales y deben ser corregidos 
+
+!image-20250413-224309.png|width=100%,alt=""image-20250413-224309.png""!",,,10054,📜 Creacion de artefactos y documentacion,Done,15/Apr/25 6:56 PM
+Hacer diagrama de casos de uso,SCRUM-12,10043,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,Done,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:19 PM,14/Apr/25 6:56 PM,13/Apr/25 7:44 PM,14/Apr/25 6:56 PM,,0,"!image-20250414-215634.png|width=1316,height=549,alt=""image-20250414-215634.png""!",,Emiliano Las Heras,Sebasti�n Cejas,,604a3dea58aa8d00722ac5f8,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,14/Apr/25 6:56 PM;ed8dd922-c8fa-4fe5-99c8-385a5de32e3e;image-20250414-215634.png;https://turisteando-en-mendoza.atlassian.net/rest/api/3/attachment/content/10036,,,,,,,,,,,,,,,,,,0|hzzzzl:y,,,Sprint 1,,,,,,,,,,2025-04-13 22:39:07.259,10000_*:*_1_*:*_500496296_*|*_10001_*:*_1_*:*_0,"13/Apr/25 7:39 PM;604a3dea58aa8d00722ac5f8;Se entiende que es un generico de CdU. Agregar desc para la prox juntada/ meetup para que entendamos bien el ALCANCE de la misma. Calculo que son todos los diagramas relevantes al sprint 1 al menos.
+
+
+
+{panel:bgColor=#fffae6}
+to do: agregar descripcion a la tarea en siguiente meetup
+{panel}",14/Apr/25 4:46 PM;712020:4fc00f68-7eec-4a29-a801-219aa96aa54e;Bastante a la que te criaste el diagrama pero sirve jajaja,,10054,📜 Creacion de artefactos y documentacion,Done,14/Apr/25 6:56 PM
+Hacer documentación de la app,SCRUM-11,10042,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Highest,Done,Magui Cobos,70121:921614ba-3e24-42c6-b37c-35b1389f9314,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:19 PM,21/Apr/25 12:06 AM,16/Apr/25 4:48 PM,21/Apr/25 12:04 AM,,0,"[Documentacion del diseño de la app|https://docs.google.com/document/d/1SneNiAqFcTNwIqPJKnVu6IqFdUNr_HsI7k8DLmgKcHQ/edit?tab=t.0#heading=h.bl0mf7cvbty2]
+
+[Figma|https://www.figma.com/design/Byy9Mrmhf1SxX24o1F5AHt/Turisteando?node-id=191-1271&p=f&t=SoH9hteTbWhttUIR-0]",,Emiliano Las Heras,Sebasti�n Cejas,,604a3dea58aa8d00722ac5f8,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|hzzzzf:,,,Sprint 1,,,,,,,,,,2025-04-13 22:38:13.517,10000_*:*_2_*:*_779206999_*|*_10002_*:*_1_*:*_11130_*|*_10001_*:*_3_*:*_250794783,"13/Apr/25 7:38 PM;604a3dea58aa8d00722ac5f8;{panel:bgColor=#fffae6}
+to do: agregar descripcion a la tarea en siguiente meetup
+{panel}",,,10054,📜 Creacion de artefactos y documentacion,Done,21/Apr/25 12:04 AM
+Sistema de ubicacion en tiempo real,SCRUM-8,10039,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,High,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:06 PM,15/Apr/25 6:53 PM,13/Apr/25 8:22 PM,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0001m:,,,Sprint 2,,,,,,,,,,,,,,,10048,🗺️ Integrar los mapas a la app,To Do,08/Apr/25 9:06 PM
+Autentificacion (Auth imp),SCRUM-7,10038,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Highest,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:03 PM,15/Apr/25 6:52 PM,13/Apr/25 8:02 PM,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0001l:,,,Sprint 2,,,,,,,,,,,,,,,10053,👤 Integracion de sistema de usuarios,To Do,08/Apr/25 9:03 PM
+Sistema de notificaciones ¿Que es esto?,SCRUM-6,10037,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 9:01 PM,15/Apr/25 6:54 PM,13/Apr/25 8:12 PM,,,0,,,Emiliano Las Heras,Sebasti�n Cejas,,604a3dea58aa8d00722ac5f8,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0001l:v,,,Sprint 4,,,,,,,,,,2025-04-13 23:13:19.029,,"13/Apr/25 8:13 PM;604a3dea58aa8d00722ac5f8;redefinir en la prox meetup. Probablemente haga referencia al *Sistema de user feedback*. que incluye multiples facetas más (inbound notifications, alerts, reports, etc…)",,,10052,⚠️ Interacciones con el usuario,To Do,08/Apr/25 9:01 PM
+Sistema de aportes a la app,SCRUM-5,10036,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 8:58 PM,22/Apr/25 8:57 PM,,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0001l:r,,,Sprint 4,,,,,,,,,,,,,,,10050,ℹ️ Integrar solicitudes del usuario,To Do,08/Apr/25 8:58 PM
+Sistema de comentarios,SCRUM-4,10035,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Medium,,,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 8:58 PM,15/Apr/25 6:54 PM,,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0001l:i,,,Sprint 3,,,,,,,,,,,,,,,10050,ℹ️ Integrar solicitudes del usuario,To Do,08/Apr/25 8:58 PM
+Sistema de busqueda y filtrado,SCRUM-3,10034,Task,To Do,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,High,,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 8:56 PM,22/Apr/25 7:58 PM,,,,0,,,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0001k:,,,Sprint 2,,,,,,,,,,,,,,,10049,🔍 Integrar busqueda y filtrado,To Do,08/Apr/25 8:56 PM
+Conexion a api de mapas,SCRUM-2,10033,Task,Done,SCRUM,Turismo en Mendoza,software,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,Highest,Done,Emiliano Las Heras,604a3dea58aa8d00722ac5f8,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,Sebasti�n Cejas,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,08/Apr/25 8:54 PM,23/Apr/25 1:28 AM,23/Apr/25 1:28 AM,23/Apr/25 1:28 AM,,0,"h3. Objetivo
+
+* Implementar la capa de conexión e inicialización a la librería de mapas elegida en [https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-26|https://turisteando-en-mendoza.atlassian.net/browse/SCRUM-26|smart-link].
+
+h3. Pasos principales
+
+* -Instalar dependencias.-
+* {color:#ff5630}Crear wrapper {color}{{MapService}}{color:#ff5630} que{color}:  
+** {color:#ff5630}exponga función {color}{{initMap(container, options)}}{color:#ff5630}  {color}
+** {color:#ff5630}gestione cleanup y re-creación{color}.  
+* -Proveer utilidades para añadir capas y marcadores (placeholders).  -
+* -Actualizar README de desarrollo rápido.-
+
+h3. Entregables
+
+* Actualización de documentación en {{llm-context/maps-setup.md}}.
+
+h3. Hecho cuando
+
+* -Mapa base se renderiza en la PoC usando OpenLayers-",,Sebasti�n Cejas,,,712020:4fc00f68-7eec-4a29-a801-219aa96aa54e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|hzzzyx:,,,Sprint 1,,,,,,,,,,,10000_*:*_1_*:*_1218559260_*|*_10001_*:*_1_*:*_0,,,,10048,🗺️ Integrar los mapas a la app,Done,23/Apr/25 1:28 AM
