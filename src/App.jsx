@@ -1,9 +1,15 @@
 import './App.css';
-import MapView from './components/OpenLayersMapView';
-// import MapView from './components/LeafletMapView.jsx';
-import mockPOIs from './data/mockPOIs';
 
 import ListaUsuarios from './components/ListaUsuarios.jsx';
+
+import MapView from './components/OpenLayersMapView';
+import mockPOIs from './data/mockPOIs';
+
+// If you want to use Leaflet instead of OpenLayers, uncomment the following lines
+// import MapView from './components/LeafletMapView.jsx';
+// import 'leaflet/dist/leaflet.css'
+
+
 
 function App() {
   return (

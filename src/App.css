@@ -1,61 +1,149 @@
+/* =============================================================================
+   App.css — Estructura profesional y mantenible
+   =============================================================================
+   1. Import de fuentes
+   2. Design Tokens (:root)
+   3. Reset y base global
+   4. Estilos globales de elementos
+   5. Contenedor principal (#root, .App)
+   6. Componentes comunes
+   7. Animaciones y media queries
+   ============================================================================= */
+
+/* 1. Import de fuentes ------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@700&family=Hind:wght@400;500&display=swap");
+
+/* 2. Design Tokens ----------------------------------------------------------- */
+:root {
+  /* — Paleta de color — */
+  --clr-wine-900:    #5D2120;
+  --clr-wine-700:    #9D3D38;
+  --clr-wine-500:    #AD602E;
+  --clr-sand-300:    #E9BE87;
+
+  --clr-neutral-900: #1E1E1E;
+  --clr-neutral-700: #333333;
+  --clr-neutral-500: #888888;
+  --clr-neutral-300: #CCCCCC;
+  --clr-neutral-100: #F9F9F9;
+  --clr-neutral-000: #FFFFFF;
+
+  --clr-neutral-light-background-pick: #fffbf6;
+  --clr-neutral-dark-background-pick: #1e1e1e;
+
+  /* — Colores semánticos — */
+  --color-primary:       var(--clr-wine-700);
+  --color-primary-dark:  var(--clr-wine-900);
+  --color-accent:        var(--clr-wine-500);
+  --color-bg-default:    var(--clr-neutral-light-background-pick);
+  --color-text-default:  var(--clr-neutral-900);
+  --color-text-muted:    var(--clr-neutral-500);
+  --color-border:        var(--clr-neutral-300);
+  --color-warning:       #FF9800;
+  --color-warning-text:  var(--clr-neutral-000);
+
+  /* — Tipografía — */
+  --ff-display: "Sofia Sans Condensed", sans-serif; /* Títulos */
+  --ff-body:    "Hind", sans-serif;                 /* Texto cuerpo */
+
+  --fs-display: 26px;  /* Tamaño para h1/h2 */
+  --fs-body:    15px;  /* Texto normal */
+
+  --fw-display: 700;   /* Bold */
+  --fw-body:    400;   /* Regular */
+
+  /* — Espaciado y layout — */
+  --max-content-width: 1280px;
+  --gutter: 2rem;
+}
+
+/* 3. Reset y base global ---------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Estilos globales de elementos ------------------------------------------ */
+html {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--color-text-default);
+  background-color: var(--color-bg-default);
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-display);
+  font-size: var(--fs-display);
+  color: var(--color-primary-dark);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+/* 5. Contenedor principal --------------------------------------------------- */
 #root {
-  max-width: 1280px;
+  max-width: var(--max-content-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--gutter);
   text-align: center;
 }
 
+.App {
+  /* Asegura uso de tokens tipográficos */
+  font-family: var(--ff-body);
+  color: var(--color-text-default);
+}
+
+/* 6. Componentes comunes ----------------------------------------------------- */
+/* Logo con efecto hover y animación */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms ease-in-out;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--clr-wine-500)33);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--color-accent)aa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Tarjetas genéricas */
 .card {
   padding: 2em;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--clr-neutral-100);
 }
 
+/* Texto de ayuda / Docs */
 .read-the-docs {
-  color: #888;
+  color: var(--color-text-muted);
+  font-size: 0.9em;
 }
 
-/* General styles for the App */
-.App {
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-/* Ribbon Overlay - improved for full visibility */
+/* Ribbon de advertencia */
 .ribbon {
   position: fixed;
   top: 3.5em;
   right: -3.5em;
-  background: #ff9800; /* warning orange */
-  color: #fff;
-  padding: 0.5em 3em;
-  font-weight: bold;
+  background: var(--color-warning);
+  color: var(--color-warning-text);
+  padding: 0.5em 4em;
+  font-weight: 700;
   font-size: 1rem;
   transform: rotate(45deg);
   z-index: 1000;
@@ -63,35 +151,50 @@
   letter-spacing: 0.05em;
 }
 
-/* Map placeholder for clarity */
+/* Placeholder de mapa */
 .map-placeholder {
   min-height: 300px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   margin: 1em 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fafafa;
-  color: #888;
+  background: var(--clr-neutral-100);
+  color: var(--color-text-muted);
   font-size: 1.1em;
 }
 
-/* Navigation styles */
+/* Navegación básica */
 nav {
   margin: 1em 0;
 }
-
 nav button {
   margin: 0 0.5em;
   padding: 0.5em 1em;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
+  border: 1px solid var(--color-border);
+  background: var(--clr-neutral-100);
+  color: var(--color-text-default);
   cursor: pointer;
+  transition: background 200ms;
+}
+nav button:hover:not(:disabled) {
+  background: var(--clr-neutral-300);
+}
+nav button:disabled {
+  background: var(--clr-neutral-100);
+  color: var(--clr-neutral-500);
+  cursor: not-allowed;
 }
 
-nav button:disabled {
-  background: #e0e0e0;
-  color: #a0a0a0;
-  cursor: not-allowed;
+/* 7. Animaciones y media queries ------------------------------------------- */
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
