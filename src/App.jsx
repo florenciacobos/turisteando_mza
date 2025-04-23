@@ -1,11 +1,10 @@
 import './App.css';
-import MapView from './components/MapView';
+import MapView from './components/LeafletMapView';
 import pois from './data/pois';
 
 function App() {
   return (
     <div className="App">
-      {/* Ribbon Overlay - fixed and fully visible */}
       <div className="ribbon" role="status" aria-live="polite">
         PROTOTYPE BUILD
       </div>
