@@ -1,41 +1,34 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+import MapView from './components/LeafletMapView';
+import pois from './data/pois';
 
 import ListaUsuarios from './components/ListaUsuarios.jsx';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <div className="ribbon" role="status" aria-live="polite">
+        PROTOTYPE BUILD
       </div>
-      <h1>Bienvenido a Turisteando MZA</h1>
-      <p>Tu aplicación de información turística para Mendoza.</p>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div className="lista-usuarios">
-        <ListaUsuarios />
-      </div>
-    </>
+      <header>
+        <h1>Turisteando Mendoza</h1>
+      </header>
+      <nav>
+        <button>Mapa</button>
+        <button disabled aria-disabled="true">Inicio</button>
+        <button disabled aria-disabled="true">Filtros</button>
+        <button disabled aria-disabled="true">Perfil</button>
+        <button disabled aria-disabled="true">Feedback</button>
+        <button disabled aria-disabled="true">Itinerarios</button>
+        <button disabled aria-disabled="true">Notificaciones</button>
+      </nav>
+      <main>
+        <MapView pois={pois} />
+      </main>
+      <footer>
+        {/* Placeholder for footer */}
+      </footer>
+    </div>
   );
 }
 

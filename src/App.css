@@ -40,3 +40,58 @@
 .read-the-docs {
   color: #888;
 }
+
+/* General styles for the App */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Ribbon Overlay - improved for full visibility */
+.ribbon {
+  position: fixed;
+  top: 3.5em;
+  right: -3.5em;
+  background: #ff9800; /* warning orange */
+  color: #fff;
+  padding: 0.5em 3em;
+  font-weight: bold;
+  font-size: 1rem;
+  transform: rotate(45deg);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.05em;
+}
+
+/* Map placeholder for clarity */
+.map-placeholder {
+  min-height: 300px;
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  color: #888;
+  font-size: 1.1em;
+}
+
+/* Navigation styles */
+nav {
+  margin: 1em 0;
+}
+
+nav button {
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+nav button:disabled {
+  background: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
