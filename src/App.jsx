@@ -1,40 +1,65 @@
 import './App.css';
+import { useNavigate } from 'react-router-dom'; // Importamos React Router
 
 import ListaUsuarios from './components/ListaUsuarios.jsx';
-
 import MapView from './components/OpenLayersMapView';
 import mockPOIs from './data/mockPOIs';
+import perfil from './assets/Perfil.png';
 
-// If you want to use Leaflet instead of OpenLayers, uncomment the following lines
+// Si quieres usar Leaflet en lugar de OpenLayers, descomenta las siguientes líneas
 // import MapView from './components/LeafletMapView.jsx';
 // import 'leaflet/dist/leaflet.css'
 
-
-
 function App() {
+  const navigate = useNavigate();
+
+  const goToLogin = () => {
+    navigate('/login');
+  };
+
   return (
-    <div className="App">
+    <div className="home-container">
+      {/* Ribbon prototipo */}
       <div className="ribbon" role="status" aria-live="polite">
         PROTOTYPE BUILD
       </div>
-      <header>
-        <h1>Turisteando Mendoza</h1>
-      </header>
-      <nav>
+
+      {/* Header */}
+      <div className="header">
+        <span className="menu-icon">☰</span>
+        <h2 className="city">- MZA -</h2>
+          <img
+            src={perfil}
+            alt="Perfil"
+            className="profile-icon"
+            onClick={goToLogin}
+          />
+      </div>
+
+      {/* Barra de navegación */}
+      <nav className="nav-bar">
         <button>Mapa</button>
-        <button disabled aria-disabled="true">Inicio</button>
-        <button disabled aria-disabled="true">Filtros</button>
-        <button disabled aria-disabled="true">Perfil</button>
-        <button disabled aria-disabled="true">Feedback</button>
-        <button disabled aria-disabled="true">Itinerarios</button>
-        <button disabled aria-disabled="true">Notificaciones</button>
+        <button disabled>Inicio</button>
+        <button disabled>Filtros</button>
+        <button disabled>Perfil</button>
+        <button disabled>Feedback</button>
+        <button disabled>Itinerarios</button>
+        <button disabled>Notificaciones</button>
       </nav>
-      <main>
+
+      {/* Mapa */}
+      <div className="map-container">
         <MapView pois={mockPOIs} />
-      </main>
-      <footer>
-        {/* Placeholder for footer */}
-      </footer>
+      </div>
+
+      {/* Botón de búsqueda */}
+      <button className="search-button" onClick={() => alert('Buscar')}>
+        🔍
+      </button>
+
+      {/* Footer opcional */}
+      <footer></footer>
+
     </div>
   );
 }
