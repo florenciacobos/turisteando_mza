@@ -21,6 +21,10 @@ function App() {
     navigate('/lugar');
   };
 
+  const goToSugerencias = () => {
+    navigate('/sugerencias');
+  };
+
   return (
     <div className="home-container">
       {/* Ribbon prototipo */}
@@ -64,6 +68,11 @@ function App() {
       {/* Botón de búsqueda */}
       <button className="search-button" onClick={goToVistaLugar}>
         ♥
+      </button>
+
+      {/* Botón Sugerencias */}
+      <button className="search-button" onClick={goToSugerencias}>
+        SUG
       </button>
 
       {/* Footer opcional */}

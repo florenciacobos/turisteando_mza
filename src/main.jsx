@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.jsx';
 import Login from './Login.jsx';
 import VistaLugar from './VistaLugar.jsx';
+import Sugerencias from './sugerencias.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/lugar" element={<VistaLugar />} />
+        <Route path="/sugerencias" element={<Sugerencias />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

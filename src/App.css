@@ -430,3 +430,65 @@ nav button:disabled {
   width: 5%;
   margin-bottom: -3px;
 }
+
+
+/* SUGERENCIAS */
+
+.lugar-card {
+  display: flex;
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  gap: 16px;
+
+}
+
+.lugar-card img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.titulo-categoria , .titulo-distancia{
+  font-weight: bold;
+  color: #9d3d38;
+}
+
+.checkbox-parque, .checkbox-cerca{
+  margin-right: 10px;
+
+}
+
+.card-sombra {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card-contenido{
+  font-family: var(--ff-body);
+  font-size: 10px;
+  margin-bottom: 5px;
+  font-size: var(--fw-display);
+  background-color: #1d7910;
+
+  text-align:center;
+}
+
+.btn-visitado{
+  border-radius: 16px;
+  background-color: #8e3b30;
+  color: white;
+  border: none;
+  padding: 10px 20px ;
+  font-size: 1rem;
+  font-weight: 500;            
+  cursor: pointer;               
+  transition: background-color 0.3s ease;
+}
+
+.btn-visitado:hover {
+  background-color: #732d24;
+  transform: scale(1.03);
+}
