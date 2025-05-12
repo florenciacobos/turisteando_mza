@@ -471,7 +471,7 @@ nav button:disabled {
   font-size: 10px;
   margin-bottom: 5px;
   font-size: var(--fw-display);
-  background-color: #1d7910;
+  /* background-color: #1d7910; */
 
   text-align:center;
 }
