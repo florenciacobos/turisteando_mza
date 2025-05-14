@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom"; // Importa useNavigate
-import mockPOIs from "./data/mockPOIs.js"; // ajustá el path si es necesario
+import { useNavigate } from "react-router-dom";
+import mockPOIs from "./data/mockPOIs.js";
 import "./App.css";
 import * as React from "react";
 import AspectRatio from "@mui/joy/AspectRatio";
@@ -15,6 +15,9 @@ const Login = () => {
     navigate("/");
   };
 
+  const lugarId = 1; // ejemplo
+  const lugar = mockPOIs.find((item) => item.id === lugarId);
+
   const [favoritos, setFavoritos] = React.useState([]);
 
   const toggleFavorito = (nombreLugar) => {
@@ -29,10 +32,24 @@ const Login = () => {
       return nuevos;
     });
   };
-
-  const lugarId = 1; // ejemplo
-  const lugar = mockPOIs.find((item) => item.id === lugarId);
   const esFavorito = favoritos.includes(lugar.name);
+
+  const [visitados, setVisitados] = React.useState(() => {
+    return JSON.parse(localStorage.getItem("visitados")) || [];
+  });
+  const estaVisitado = visitados.includes(lugar.name);
+
+  const toggleVisitado = () => {
+    let nuevos;
+    if (estaVisitado) {
+      nuevos = visitados.filter((item) => item !== lugar.name);
+    } else {
+      nuevos = [...visitados, lugar.name];
+    }
+    setVisitados(nuevos);
+    localStorage.setItem("visitados", JSON.stringify(nuevos));
+  };
+
 
   const data = [
     //ejemplo
@@ -184,9 +201,14 @@ const Login = () => {
           </span>
         </div>
         <div className="container-input">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            checked={estaVisitado}
+            onChange={toggleVisitado}
+          />
           <span> Marcar como visitado </span>
         </div>
+
         <div className="container-direccion">
           <h6>Dirección</h6>
           <p>Av. Emilio Civit 701, Ciudad, Mendoza</p>
