@@ -500,7 +500,7 @@ nav button:disabled {
   font-size: 10px;
   margin-bottom: 5px;
   font-size: var(--fw-display);
-  text-align: center;
+  text-align: left;
 }
 
 .btn-visitado{

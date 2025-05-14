@@ -19,17 +19,14 @@ const Login = () => {
 
   const toggleFavorito = (nombreLugar) => {
     setFavoritos((prevFavoritos) => {
+      let nuevos;
       if (prevFavoritos.includes(nombreLugar)) {
-        // Si ya está, lo quita
-        const nuevos = prevFavoritos.filter((item) => item !== nombreLugar);
-        console.log("Favoritos:", nuevos);
-        return nuevos;
+        nuevos = prevFavoritos.filter((item) => item !== nombreLugar);
       } else {
-        // Si no está, lo agrega
-        const nuevos = [...prevFavoritos, nombreLugar];
-        console.log("Favoritos:", nuevos);
-        return nuevos;
+        nuevos = [...prevFavoritos, nombreLugar];
       }
+      localStorage.setItem("favoritos", JSON.stringify(nuevos));
+      return nuevos;
     });
   };
 
@@ -37,7 +34,8 @@ const Login = () => {
   const lugar = mockPOIs.find((item) => item.id === lugarId);
   const esFavorito = favoritos.includes(lugar.name);
 
-  const data = [  //ejemplo
+  const data = [
+    //ejemplo
     {
       src: "https://billiken.lat/wp-content/uploads/2022/01/portones-768x455.jpeg",
     },
@@ -82,7 +80,10 @@ const Login = () => {
         >
           {esFavorito ? (
             // Corazón lleno
-            <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            <path
+              fillRule="evenodd"
+              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+            />
           ) : (
             // Corazón vacío
             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />

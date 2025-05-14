@@ -25,6 +25,10 @@ function App() {
     navigate('/sugerencias');
   };
 
+  const goToFavoritos = () => {
+    navigate('/favoritos');
+  };
+
   return (
     <div className="home-container">
       {/* Ribbon prototipo */}
@@ -65,7 +69,7 @@ function App() {
         🔍
       </button>
 
-      {/* Botón de búsqueda */}
+      {/* Botón de lugar */}
       <button className="search-button" onClick={goToVistaLugar}>
         Lugar
       </button>
@@ -73,6 +77,11 @@ function App() {
       {/* Botón Sugerencias */}
       <button className="search-button" onClick={goToSugerencias}>
         SUG
+      </button>
+
+      {/* Botón de favoritos */}
+      <button className="search-button" onClick={goToFavoritos}>
+        FAV
       </button>
 
       {/* Footer opcional */}
