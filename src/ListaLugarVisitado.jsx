@@ -15,7 +15,7 @@ const LugaresVisitados = () => {
   }, []);
 
   const handleBack = () => {
-    navigate("/");
+    navigate("/"); 
   };
 
   const goToVistaLugar = () => {

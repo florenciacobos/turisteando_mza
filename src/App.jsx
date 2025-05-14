@@ -29,6 +29,10 @@ function App() {
     navigate('/favoritos');
   };
 
+  const goToVisitados = () => {
+    navigate('/visitados');
+  };
+
   return (
     <div className="home-container">
       {/* Ribbon prototipo */}
@@ -82,6 +86,11 @@ function App() {
       {/* Botón de favoritos */}
       <button className="search-button" onClick={goToFavoritos}>
         FAV
+      </button>
+
+      {/* Botón de visitados */}
+      <button className="search-button" onClick={goToVisitados}>
+        VIS
       </button>
 
       {/* Footer opcional */}
