@@ -5,7 +5,7 @@ import App from './App.jsx';
 import Login from './Login.jsx';
 import VistaLugar from './VistaLugar.jsx';
 import ListaFavoritos from './ListaFavoritos.jsx';
-import Sugerencias from './sugerencias.jsx';
+import Sugerencias from './Sugerencias.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
