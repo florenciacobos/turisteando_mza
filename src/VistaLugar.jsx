@@ -1,6 +1,13 @@
 import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import mockPOIs from "./data/mockPOIs.js"; // ajustá el path si es necesario
 import "./App.css";
+import * as React from "react";
+import AspectRatio from "@mui/joy/AspectRatio";
+import Box from "@mui/joy/Box";
+import Typography from "@mui/joy/Typography";
+import Card from "@mui/joy/Card";
+import Avatar from "@mui/joy/Avatar";
+import CardContent from "@mui/joy/CardContent";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -8,12 +15,44 @@ const Login = () => {
     navigate("/");
   };
 
+  const [favoritos, setFavoritos] = React.useState([]);
+
+  const toggleFavorito = (nombreLugar) => {
+    setFavoritos((prevFavoritos) => {
+      if (prevFavoritos.includes(nombreLugar)) {
+        // Si ya está, lo quita
+        const nuevos = prevFavoritos.filter((item) => item !== nombreLugar);
+        console.log("Favoritos:", nuevos);
+        return nuevos;
+      } else {
+        // Si no está, lo agrega
+        const nuevos = [...prevFavoritos, nombreLugar];
+        console.log("Favoritos:", nuevos);
+        return nuevos;
+      }
+    });
+  };
+
   const lugarId = 1; // ejemplo
   const lugar = mockPOIs.find((item) => item.id === lugarId);
+  const esFavorito = favoritos.includes(lugar.name);
+
+  const data = [  //ejemplo
+    {
+      src: "https://billiken.lat/wp-content/uploads/2022/01/portones-768x455.jpeg",
+    },
+    {
+      src: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/65000/65201-General-San-Martin-Park.jpg",
+    },
+    {
+      src: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/65000/65195-General-San-Martin-Park.jpg",
+    },
+  ];
 
   return (
     <div className="container-vista-lugar">
       <div className="header-vista-lugar">
+        {/* Flecha para volver al inicio*/}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -24,38 +63,67 @@ const Login = () => {
           onClick={handleBack}
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
           />
         </svg>
 
+        {/* Corazon para agregar/eliminar de favoritos */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
+          width="20"
+          height="20"
+          fill={esFavorito ? "#5d2120" : "none"}
+          stroke="#5d2120"
           className="bi bi-heart"
-          viewBox="0 0 16 16"
+          viewBox="0 0 20 20"
+          style={{ cursor: "pointer" }}
+          onClick={() => toggleFavorito(lugar.name)}
         >
-          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+          {esFavorito ? (
+            // Corazón lleno
+            <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+          ) : (
+            // Corazón vacío
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+          )}
         </svg>
-
       </div>
 
       <div>
         <h2>{lugar?.name}</h2>
-        <div className="container-img-lugar">
-          <img
-            src="https://billiken.lat/wp-content/uploads/2022/01/portones-768x455.jpeg"
-            alt=""
-            className="img-vista-lugar"
-          />
-          <img
-            src="https://billiken.lat/wp-content/uploads/2022/01/portones-768x455.jpeg"
-            alt=""
-            className="img-vista-lugar"
-          />
-        </div>
+        <Box
+          sx={{
+            display: "flex",
+            gap: 1,
+            py: 2,
+            overflow: "auto",
+            width: "90vw",
+            scrollSnapType: "x mandatory",
+            "& > *": {
+              scrollSnapAlign: "center",
+            },
+            "::-webkit-scrollbar": { display: "none" },
+          }}
+        >
+          {data.map((item, index) => (
+            <Card
+              orientation="horizontal"
+              size="m"
+              key={index}
+              variant="outlined"
+            >
+              <AspectRatio ratio="1.5" sx={{ minWidth: 300 }}>
+                <img
+                  srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.src}?h=120&fit=crop&auto=format`}
+                  alt="Imagen parque"
+                  className="img-lugar"
+                />
+              </AspectRatio>
+            </Card>
+          ))}
+        </Box>
 
         <div className="container-tag">
           <span className="tag">
@@ -114,17 +182,77 @@ const Login = () => {
             4.8
           </span>
         </div>
-        <div>
-          <input type="checkbox" name="" id="" /> Marcar como visitado
+        <div className="container-input">
+          <input type="checkbox" name="" id="" />
+          <span> Marcar como visitado </span>
         </div>
-        <div>
+        <div className="container-direccion">
           <h6>Dirección</h6>
           <p>Av. Emilio Civit 701, Ciudad, Mendoza</p>
         </div>
-        <div>
+        <div className="container-descripcion">
           <h6>Descripción</h6>
           <p>{lugar?.description}</p>
         </div>
+      </div>
+
+      <div className="container-comentarios">
+        {/* Comentario 1 */}
+        <Card
+          variant="outlined"
+          sx={{
+            width: "40vw",
+            // to make the card resizable
+            overflow: "auto",
+            resize: "horizontal",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Avatar>CG</Avatar>
+            <Typography level="title-lg">Camila Gómez</Typography>
+          </Box>
+          <CardContent>
+            <Typography level="body-sm">
+              Es un lugar increible para poder relajarse y pasarlo con familia.
+              Recomendadísimo!!
+            </Typography>
+          </CardContent>
+        </Card>
+
+        {/* Comentario 2 */}
+        <Card
+          variant="outlined"
+          sx={{
+            display: "flex",
+            width: "40vw",
+            // to make the card resizable
+            overflow: "auto",
+            resize: "horizontal",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Avatar>JS</Avatar>
+            <Typography level="title-lg">Jack Ross</Typography>
+          </Box>
+          <CardContent>
+            <Typography level="body-sm">
+              It is an incredible place to relax and spend time with family.
+              Highly recommended!
+            </Typography>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

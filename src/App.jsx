@@ -67,7 +67,7 @@ function App() {
 
       {/* Botón de búsqueda */}
       <button className="search-button" onClick={goToVistaLugar}>
-        ♥
+        Lugar
       </button>
 
       {/* Botón Sugerencias */}
