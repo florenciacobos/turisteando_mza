@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
+
 
 
 const sugerencias = [
@@ -42,102 +45,130 @@ const Sugerencias = () => {
         );
     };
 
+    const navigate = useNavigate();
+
+    const handleBack = () => {
+        navigate("/"); // Esto te lleva al inicio
+    };
+
+
 
     return (
         <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
-            <h2 className="text-xl font-semibold mb-4 text-center text-[#3b3b3b]">
-                Lugares sugeridos
-            </h2>
-
-            {/* Filtros */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="space-y-2">
-                    <p className="titulo-categoria text-sm font-semibold text-gray-600 ">Categorías</p>
-                    <label className=" checkbox-parque flex items-center space-x-2">
-                        <input
-                            type="checkbox"
-                            value="Parque"
-                            checked={categorias.includes("Parque")}
-                            onChange={handleCategoriaChange}
-                        />
-                        <span> Parque</span>
-                    </label>
-                    <label className="flex items-center space-x-2">
-                        <input
-                            type="checkbox"
-                            value="Bodega"
-                            checked={categorias.includes("Bodega")}
-                            onChange={handleCategoriaChange}
-                        />
-                        <span> Bodega</span>
-                    </label>
-                </div>
-
-                <div className="space-y-2">
-                    <p className="titulo-distancia text-sm font-semibold text-gray-600">Distancia</p>
-                    <label className="checkbox-cerca flex items-center space-x-2">
-                        <input
-                            type="checkbox"
-                            value="Cerca"
-                            checked={distancia.includes("Cerca")}
-                            onChange={handleDistanciaChange}
-                        />
-                        <span> Cerca (-3 km)</span>
-                    </label>
-                    <label className="flex items-center space-x-2">
-                        <input
-                            type="checkbox"
-                            value="Lejos"
-                            checked={distancia.includes("Lejos")}
-                            onChange={handleDistanciaChange}
-                        />
-                        <span> Lejos (+3 km)</span>
-                    </label>
-                </div>
+            <div className="header-vista-lugar">
+                {/* Flecha para volver al inicio */}
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-arrow-left"
+                    viewBox="0 0 16 16"
+                    onClick={handleBack}
+                >
+                    <path
+                        fillRule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                    />
+                </svg>
             </div>
 
-            <div className="card-lugar space-y-6">
-                {sugerencias.map((lugar) => (
-                    <div
-                        key={lugar.id}
-                        className="card-sombra bg-white rounded-2xl p-4 flex flex bg-white rounded-2xl shadow-md p-4 space-x-4 lugar-card"
-                    >
-                        <img
-                            src={lugar.imagen}
-                            alt={lugar.nombre}
-                            className="rounded-xl w-32 h-32 object-cover"
-                        />
 
-                        <div className="flex flex-col justify-between flex-1">
-                            <div className='card-contenido'>
-                                <div className="flex justify-between items-start">
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-[#3b3b3b]">{lugar.nombre}</h3>
-                                        <p className="text-sm text-gray-500">{lugar.categoria}</p>
+            <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
+                <h2 className="text-xl font-semibold mb-4 text-center text-[#3b3b3b]">
+                    Lugares sugeridos
+                </h2>
+
+                {/* Filtros */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="space-y-2">
+                        <p className="titulo-categoria text-sm font-semibold text-gray-600 ">Categorías</p>
+                        <label className=" checkbox-parque flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                value="Parque"
+                                checked={categorias.includes("Parque")}
+                                onChange={handleCategoriaChange}
+                            />
+                            <span> Parque</span>
+                        </label>
+                        <label className="flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                value="Bodega"
+                                checked={categorias.includes("Bodega")}
+                                onChange={handleCategoriaChange}
+                            />
+                            <span> Bodega</span>
+                        </label>
+                    </div>
+
+                    <div className="space-y-2">
+                        <p className="titulo-distancia text-sm font-semibold text-gray-600">Distancia</p>
+                        <label className="checkbox-cerca flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                value="Cerca"
+                                checked={distancia.includes("Cerca")}
+                                onChange={handleDistanciaChange}
+                            />
+                            <span> Cerca (-3 km)</span>
+                        </label>
+                        <label className="flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                value="Lejos"
+                                checked={distancia.includes("Lejos")}
+                                onChange={handleDistanciaChange}
+                            />
+                            <span> Lejos (+3 km)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div className="card-lugar space-y-6">
+                    {sugerencias.map((lugar) => (
+                        <div
+                            key={lugar.id}
+                            className="card-sombra bg-white rounded-2xl p-4 flex flex bg-white rounded-2xl shadow-md p-4 space-x-4 lugar-card"
+                        >
+                            <img
+                                src={lugar.imagen}
+                                alt={lugar.nombre}
+                                className="rounded-xl w-32 h-32 object-cover"
+                            />
+
+                            <div className="flex flex-col justify-between flex-1">
+                                <div className='card-contenido'>
+                                    <div className="flex justify-between items-start">
+                                        <div>
+                                            <h3 className="text-lg font-semibold text-[#3b3b3b]">{lugar.nombre}</h3>
+                                            <p className="text-sm text-gray-500">{lugar.categoria}</p>
+                                        </div>
+
                                     </div>
 
+                                    <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
+                                        <p className="text-gray-500 font-semibold">Dirección</p>
+                                        <p className="text-[#3b3b3b]">{lugar.direccion}</p>
+                                    </div>
+
+                                    <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
+                                        <p className="text-gray-500 font-semibold">Descripción: </p>
+                                        <p className="text-[#3b3b3b]">{lugar.descripcion}</p>
+                                    </div>
+                                    <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
+                                        {lugar.distancia} km
+                                    </span>
                                 </div>
 
-                                <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
-                                    <p className="text-gray-500 font-semibold">Dirección</p>
-                                    <p className="text-[#3b3b3b]">{lugar.direccion}</p>
-                                </div>
-
-                                <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
-                                    <p className="text-gray-500 font-semibold">Descripción: </p>
-                                    <p className="text-[#3b3b3b]">{lugar.descripcion}</p>
-                                </div>
-                                <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
-                                    {lugar.distancia} km
-                                </span>
+                                <button className="btn-visitado w-full bg-[#a9443d] text-white text-sm font-medium py-2 rounded-lg mt-3 hover:bg-[#922e2a] transition">
+                                    Marcar como visitado
+                                </button>
                             </div>
-
-                            <button className="btn-visitado w-full bg-[#a9443d] text-white text-sm font-medium py-2 rounded-lg mt-3 hover:bg-[#922e2a] transition">
-                                Marcar como visitado
-                            </button>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
