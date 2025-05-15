@@ -38,10 +38,6 @@ function App() {
 
   return (
     <div className="home-container">
-      {/* Ribbon prototipo */}
-      <div className="ribbon" role="status" aria-live="polite">
-        PROTOTYPE BUILD
-      </div>
 
       {/* Header */}
       <div className="header">
@@ -56,7 +52,7 @@ function App() {
       </div>
 
       {/* Barra de navegación */}
-      <nav className="nav-bar">
+      {/* <nav className="nav-bar">
         <button>Mapa</button>
         <button disabled>Inicio</button>
         <button disabled>Filtros</button>
@@ -64,7 +60,7 @@ function App() {
         <button disabled>Feedback</button>
         <button disabled>Itinerarios</button>
         <button disabled>Notificaciones</button>
-      </nav>
+      </nav> */}
 
       {/* Mapa */}
       <div className="map-container">
@@ -82,19 +78,19 @@ function App() {
       </button>
 
       {/* Botón Sugerencias */}
-      <button className="search-button" onClick={goToSugerencias}>
+      {/* <button className="search-button" onClick={goToSugerencias}>
         SUG
       </button>
 
       {/* Botón de favoritos */}
-      <button className="search-button" onClick={goToFavoritos}>
+      {/* <button className="search-button" onClick={goToFavoritos}>
         FAV
-      </button>
+      </button> */}
 
       {/* Botón de visitados */}
-      <button className="search-button" onClick={goToVisitados}>
+      {/* <button className="search-button" onClick={goToVisitados}>
         VIS
-      </button>
+      </button> */}
 
       {/* ✅ Menú lateral si está abierto */}
       {isMenuOpen && <Menu closeMenu={() => setIsMenuOpen(false)} />}

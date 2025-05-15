@@ -19,7 +19,7 @@ function Menu({ closeMenu }) {
 
       {/* Contenedor del menú */}
       <ul className="menu-list">
-        <li className="active"><span>📍</span> Lugares sugeridos</li>
+        <li onClick={() => goTo('/sugerencias')}><span>📍</span> Lugares sugeridos</li>
         <li onClick={() => goTo('/visitados')}><span>⏱️</span> Lugares visitados</li>
         <li onClick={() => goTo('/favoritos')}><span>❤️</span> Mis lugares favoritos</li>
         <li onClick={() => goTo('/agregar')}><span>➕</span> Agregar sitio</li>
