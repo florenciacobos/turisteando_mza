@@ -1,8 +1,9 @@
 import './App.css';
-import { useNavigate } from 'react-router-dom'; // Importamos React Router
-
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'; 
 import ListaUsuarios from './components/ListaUsuarios.jsx';
 import MapView from './components/OpenLayersMapView';
+import Menu from './Menu'; 
 import mockPOIs from './data/mockPOIs';
 import perfil from './assets/Perfil.png';
 
@@ -33,6 +34,8 @@ function App() {
     navigate('/visitados');
   };
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="home-container">
       {/* Ribbon prototipo */}
@@ -42,14 +45,14 @@ function App() {
 
       {/* Header */}
       <div className="header">
-        <span className="menu-icon">☰</span>
+        <span className="menu-icon" onClick={() => setIsMenuOpen(true)}>☰</span>
         <h2 className="city">- MZA -</h2>
-          <img
-            src={perfil}
-            alt="Perfil"
-            className="profile-icon"
-            onClick={goToLogin}
-          />
+        <img
+          src={perfil}
+          alt="Perfil"
+          className="profile-icon"
+          onClick={goToLogin}
+        />
       </div>
 
       {/* Barra de navegación */}
@@ -93,9 +96,11 @@ function App() {
         VIS
       </button>
 
+      {/* ✅ Menú lateral si está abierto */}
+      {isMenuOpen && <Menu closeMenu={() => setIsMenuOpen(false)} />}
+
       {/* Footer opcional */}
       <footer></footer>
-
     </div>
   );
 }
