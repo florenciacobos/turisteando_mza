@@ -4,8 +4,9 @@ import { useState } from 'react';
 import ListaUsuarios from './components/ListaUsuarios.jsx';
 import MapView from './components/OpenLayersMapView';
 import Menu from './Menu'; 
-import mockPOIs from './data/mockPOIs';
 import perfil from './assets/Perfil.png';
+import { useEffect } from 'react';
+import { fetchPOIs } from './services/poiService.js';
 
 // Si quieres usar Leaflet en lugar de OpenLayers, descomenta las siguientes líneas
 // import MapView from './components/LeafletMapView.jsx';
@@ -13,6 +14,15 @@ import perfil from './assets/Perfil.png';
 
 function App() {
   const navigate = useNavigate();
+  const [pois, setPois] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await fetchPOIs();
+      setPois(data);
+    }
+    fetchData();
+  }, []);
 
   const goToLogin = () => {
     navigate('/login');
@@ -64,7 +74,7 @@ function App() {
 
       {/* Mapa */}
       <div className="map-container">
-        <MapView pois={mockPOIs} />
+        <MapView pois={pois} />
       </div>
 
       {/* Botón de búsqueda */}
