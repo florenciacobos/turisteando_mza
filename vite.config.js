@@ -39,5 +39,16 @@ export default defineConfig({
 
       }
     })
-  ]
+  ],
+  //! == Development only to solve CORS issues ==
+  //! This is a temporary solution for development purposes only.
+  server: {
+    proxy: {
+      '/opentripmap': {
+        target: 'https://api.opentripmap.com/0.1/en',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/opentripmap/, '')
+      }
+    }
+  }
 })

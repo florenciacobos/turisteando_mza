@@ -1,10 +1,12 @@
 import './App.css';
-import { useNavigate } from 'react-router-dom'; // Importamos React Router
-
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'; 
 import ListaUsuarios from './components/ListaUsuarios.jsx';
 import MapView from './components/OpenLayersMapView';
-import mockPOIs from './data/mockPOIs';
+import Menu from './Menu'; 
 import perfil from './assets/Perfil.png';
+import { useEffect } from 'react';
+import { fetchPOIs } from './services/poiService.js';
 
 
 // Si quieres usar Leaflet en lugar de OpenLayers, descomenta las siguientes líneas
@@ -13,6 +15,15 @@ import perfil from './assets/Perfil.png';
 
 function App() {
   const navigate = useNavigate();
+  const [pois, setPois] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await fetchPOIs();
+      setPois(data);
+    }
+    fetchData();
+  }, []);
 
   const goToLogin = () => {
     navigate('/login');
@@ -34,27 +45,25 @@ function App() {
     navigate('/visitados');
   };
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="home-container">
-      {/* Ribbon prototipo */}
-      <div className="ribbon" role="status" aria-live="polite">
-        PROTOTYPE BUILD
-      </div>
 
       {/* Header */}
       <div className="header">
-        <span className="menu-icon">☰</span>
+        <span className="menu-icon" onClick={() => setIsMenuOpen(true)}>☰</span>
         <h2 className="city">- MZA -</h2>
-          <img
-            src={perfil}
-            alt="Perfil"
-            className="profile-icon"
-            onClick={goToLogin}
-          />
+        <img
+          src={perfil}
+          alt="Perfil"
+          className="profile-icon"
+          onClick={goToLogin}
+        />
       </div>
 
       {/* Barra de navegación */}
-      <nav className="nav-bar">
+      {/* <nav className="nav-bar">
         <button>Mapa</button>
         <button disabled>Inicio</button>
         <button disabled>Filtros</button>
@@ -62,11 +71,11 @@ function App() {
         <button disabled>Feedback</button>
         <button disabled>Itinerarios</button>
         <button disabled>Notificaciones</button>
-      </nav>
+      </nav> */}
 
       {/* Mapa */}
       <div className="map-container">
-        <MapView pois={mockPOIs} />
+        <MapView pois={pois} />
       </div>
 
       {/* Botón de búsqueda */}
@@ -80,23 +89,25 @@ function App() {
       </button>
 
       {/* Botón Sugerencias */}
-      <button className="search-button" onClick={goToSugerencias}>
+      {/* <button className="search-button" onClick={goToSugerencias}>
         SUG
       </button>
 
       {/* Botón de favoritos */}
-      <button className="search-button" onClick={goToFavoritos}>
+      {/* <button className="search-button" onClick={goToFavoritos}>
         FAV
-      </button>
+      </button> */}
 
       {/* Botón de visitados */}
-      <button className="search-button" onClick={goToVisitados}>
+      {/* <button className="search-button" onClick={goToVisitados}>
         VIS
-      </button>
+      </button> */}
+
+      {/* ✅ Menú lateral si está abierto */}
+      {isMenuOpen && <Menu closeMenu={() => setIsMenuOpen(false)} />}
 
       {/* Footer opcional */}
       <footer></footer>
-
     </div>
   );
 }

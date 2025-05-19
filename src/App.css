@@ -278,6 +278,77 @@ nav button:disabled {
   background-color: var(--color-primary-dark);
 }
 
+/*MENU*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #fefefc;
+  padding: 1.2rem 1rem;
+  z-index: 999;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-header {
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #5b0a0a;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.back-button {
+  all: unset;
+  cursor: pointer;
+  color: #5b0a0a;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  padding: 0.7rem 0.5rem;
+  color: #3a1a1a;
+  border-radius: 25px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  gap: 0.6rem;
+}
+
+.menu-list li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.menu-list li:hover {
+  background-color: #f3f3f3;
+}
+
+.menu-list li.active {
+  background-color: #d6efff;
+  font-weight: 600;
+}
+
 /*LOGIN*/
 .login-container {
   max-width: 400px;
@@ -362,6 +433,86 @@ nav button:disabled {
 .back-button:hover {
   background-color: #732d24;
 }
+
+/*REGISTRAR*/
+.register-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+  background-color: #fdf6f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #5d2120;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.register-input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #bfa996;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #5d2120;
+  background: white;
+  outline: none;
+}
+
+.register-input::placeholder {
+  color: #bfa996;
+}
+
+.register-input.full-width {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.password-container {
+  position: relative;
+}
+
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #8e3b30;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.register-button:hover {
+  background-color: #732d24;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #5d2120;
+}
+
+.login-link {
+  color: #8e3b30;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 
 /* VISTA LUGAR */
 
