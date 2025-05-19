@@ -6,6 +6,7 @@ import MapView from './components/OpenLayersMapView';
 import mockPOIs from './data/mockPOIs';
 import perfil from './assets/Perfil.png';
 
+
 // Si quieres usar Leaflet en lugar de OpenLayers, descomenta las siguientes líneas
 // import MapView from './components/LeafletMapView.jsx';
 // import 'leaflet/dist/leaflet.css'

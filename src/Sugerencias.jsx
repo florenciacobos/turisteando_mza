@@ -1,8 +1,6 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-
-
-
 
 const sugerencias = [
     {
@@ -30,6 +28,7 @@ const sugerencias = [
 const Sugerencias = () => {
     const [categorias, setCategorias] = useState([]);
     const [distancia, setDistancia] = useState([]);
+    const navigate = useNavigate();
 
     const handleCategoriaChange = (e) => {
         const value = e.target.value;
@@ -45,18 +44,36 @@ const Sugerencias = () => {
         );
     };
 
-    const navigate = useNavigate();
-
     const handleBack = () => {
-        navigate("/"); // Esto te lleva al inicio
+        navigate("/");
     };
 
+    // Filtrado de lugares según filtros seleccionados
+    const lugaresFiltrados = sugerencias.filter((lugar) => {
+        // Filtrar por categoría si alguna está seleccionada
+        const categoriaMatch =
+            categorias.length === 0 ||
+            categorias.some((cat) => {
+                if (cat === "Parque") return lugar.categoria.toLowerCase().includes("parque") || lugar.categoria.toLowerCase().includes("esparcimiento");
+                if (cat === "Bodega") return lugar.categoria.toLowerCase().includes("bodega");
+                return false;
+            });
 
+        // Filtrar por distancia si alguna está seleccionada
+        const distanciaMatch =
+            distancia.length === 0 ||
+            distancia.some((dist) => {
+                if (dist === "Cerca") return lugar.distancia <= 3;
+                if (dist === "Lejos") return lugar.distancia > 3;
+                return false;
+            });
+
+        return categoriaMatch && distanciaMatch;
+    });
 
     return (
         <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
             <div className="header-vista-lugar">
-                {/* Flecha para volver al inicio */}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -73,13 +90,11 @@ const Sugerencias = () => {
                 </svg>
             </div>
 
-
             <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
                 <h2 className="text-xl font-semibold mb-4 text-center text-[#3b3b3b]">
                     Lugares sugeridos
                 </h2>
 
-                {/* Filtros */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="space-y-2">
                         <p className="titulo-categoria text-sm font-semibold text-gray-600 ">Categorías</p>
@@ -127,47 +142,61 @@ const Sugerencias = () => {
                 </div>
 
                 <div className="card-lugar space-y-6">
-                    {sugerencias.map((lugar) => (
-                        <div
-                            key={lugar.id}
-                            className="card-sombra bg-white rounded-2xl p-4 flex flex bg-white rounded-2xl shadow-md p-4 space-x-4 lugar-card"
-                        >
-                            <img
-                                src={lugar.imagen}
-                                alt={lugar.nombre}
-                                className="rounded-xl w-32 h-32 object-cover"
-                            />
-
-                            <div className="flex flex-col justify-between flex-1">
-                                <div className='card-contenido'>
-                                    <div className="flex justify-between items-start">
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-[#3b3b3b]">{lugar.nombre}</h3>
-                                            <p className="text-sm text-gray-500">{lugar.categoria}</p>
+                    {lugaresFiltrados.length > 0 ? (
+                        lugaresFiltrados.map((lugar) => (
+                            <div
+                                key={lugar.id}
+                                className="card-sombra bg-white rounded-2xl p-4 flex shadow-md space-x-4 lugar-card"
+                            >
+                                <img
+                                    src={lugar.imagen}
+                                    alt={lugar.nombre}
+                                    className="rounded-xl w-32 h-32 object-cover"
+                                />
+                                <div className="flex flex-col justify-between flex-1">
+                                    <div className='card-contenido'>
+                                        <div className="flex justify-between items-start">
+                                            <div>
+                                                <h3 className="text-lg font-semibold text-[#3b3b3b]">{lugar.nombre}</h3>
+                                                <p className="text-sm text-gray-500">{lugar.categoria}</p>
+                                            </div>
                                         </div>
 
+                                        <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
+                                            <p className="text-gray-500 font-semibold">Dirección</p>
+                                            <p className="text-[#3b3b3b]">{lugar.direccion}</p>
+                                        </div>
+
+                                        <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
+                                            <p className="text-gray-500 font-semibold">Descripción: </p>
+                                            <p className="text-[#3b3b3b]">{lugar.descripcion}</p>
+                                        </div>
+                                        <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
+                                            {lugar.distancia} km
+                                        </span>
                                     </div>
 
-                                    <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
-                                        <p className="text-gray-500 font-semibold">Dirección</p>
-                                        <p className="text-[#3b3b3b]">{lugar.direccion}</p>
-                                    </div>
+                                    <button
+                                        className="btn-visitado w-full bg-[#a9443d] text-white text-sm font-medium py-2 rounded-lg mt-3 hover:bg-[#922e2a] transition"
+                                        onClick={() => {
+                                            const lugaresGuardados = JSON.parse(localStorage.getItem("lugaresVisitados")) || [];
+                                            const yaExiste = lugaresGuardados.some((l) => l.id === lugar.id);
 
-                                    <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
-                                        <p className="text-gray-500 font-semibold">Descripción: </p>
-                                        <p className="text-[#3b3b3b]">{lugar.descripcion}</p>
-                                    </div>
-                                    <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
-                                        {lugar.distancia} km
-                                    </span>
+                                            if (!yaExiste) {
+                                                localStorage.setItem("lugaresVisitados", JSON.stringify([...lugaresGuardados, lugar]));
+                                            }
+
+                                            navigate("/visitados"); // Redirige a la vista de lugares visitados
+                                        }}
+                                    >
+                                        Marcar como visitado
+                                    </button>
                                 </div>
-
-                                <button className="btn-visitado w-full bg-[#a9443d] text-white text-sm font-medium py-2 rounded-lg mt-3 hover:bg-[#922e2a] transition">
-                                    Marcar como visitado
-                                </button>
                             </div>
-                        </div>
-                    ))}
+                        ))
+                    ) : (
+                        <p className="text-center text-gray-500">No se encontraron lugares con esos filtros.</p>
+                    )}
                 </div>
             </div>
         </div>
