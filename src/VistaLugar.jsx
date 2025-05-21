@@ -200,6 +200,7 @@ const Login = () => {
             4.8
           </span>
         </div>
+        
         <div className="container-input">
           <input
             type="checkbox"

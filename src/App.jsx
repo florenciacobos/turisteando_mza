@@ -33,17 +33,17 @@ function App() {
     navigate('/lugar');
   };
 
-  const goToSugerencias = () => {
-    navigate('/sugerencias');
-  };
+  // const goToSugerencias = () => {
+  //   navigate('/sugerencias');
+  // };
 
-  const goToFavoritos = () => {
-    navigate('/favoritos');
-  };
+  // const goToFavoritos = () => {
+  //   navigate('/favoritos');
+  // };
 
-  const goToVisitados = () => {
-    navigate('/visitados');
-  };
+  // const goToVisitados = () => {
+  //   navigate('/visitados');
+  // };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
