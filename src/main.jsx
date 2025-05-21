@@ -7,6 +7,7 @@ import VistaLugar from './VistaLugar.jsx';
 import ListaFavoritos from './ListaFavoritos.jsx';
 import ListaLugarVisitado from './ListaLugarVisitado.jsx';
 import Sugerencias from './Sugerencias.jsx';
+import AgregarSitio from './AgregarSitio.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/sugerencias" element={<Sugerencias />} />
         <Route path="/favoritos" element={<ListaFavoritos />} />
         <Route path="/visitados" element={<ListaLugarVisitado />} />
+        <Route path="/agregar" element={<AgregarSitio />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

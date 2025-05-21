@@ -612,6 +612,28 @@ nav button:disabled {
   margin-left: 3vw;
 }
 
+/* AGREGAR SITIO */
+
+.btn-agregar {
+  margin-right: 3vw;
+  padding: 2vw;
+  width: 20vw;
+  background-color: var(--clr-wine-700);
+  color: var(--clr-neutral-100);
+  border: none;
+  border-radius: 2vw;
+}
+
+.btn-cancelar {
+  margin-left: 3vw;
+  padding: 2vw;
+  width: 20vw;
+  background-color: var(--clr-neutral-000);
+  color: var(--clr-wine-700);
+  border: 2px solid var(--clr-wine-700);
+  border-radius: 2vw;
+}
+
 
 /* SUGERENCIAS */
 
