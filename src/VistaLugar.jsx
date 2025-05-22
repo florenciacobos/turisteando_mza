@@ -9,6 +9,8 @@ import Card from "@mui/joy/Card";
 import Avatar from "@mui/joy/Avatar";
 import CardContent from "@mui/joy/CardContent";
 
+import { useState } from 'react';
+
 const Login = () => {
   const navigate = useNavigate();
   const handleBack = () => {
@@ -63,6 +65,27 @@ const Login = () => {
       src: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/65000/65195-General-San-Martin-Park.jpg",
     },
   ];
+
+  // --- Estados y funciones para comentarios ---
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  const [comentario, setComentario] = useState('');
+
+  const toggleFormulario = () => {
+    setMostrarFormulario(!mostrarFormulario);
+  };
+
+  const manejarEnvio = () => {
+    if (comentario.trim() === "") {
+      alert("El comentario no puede estar vacío");
+      return;
+    }
+    // Aquí se integrará Supabase para guardar comentario
+    console.log('Comentario enviado:', comentario);
+
+    setComentario('');
+    setMostrarFormulario(false);
+  };
+
 
   return (
     <div className="container-vista-lugar">
@@ -200,7 +223,7 @@ const Login = () => {
             4.8
           </span>
         </div>
-        
+
         <div className="container-input">
           <input
             type="checkbox"
@@ -277,8 +300,28 @@ const Login = () => {
             </Typography>
           </CardContent>
         </Card>
+
+        {/* Botón para mostrar/ocultar formulario de comentario  */}
+        <button className="boton-comentario" onClick={toggleFormulario}>
+          {mostrarFormulario ? "Cancelar comentario" : "Dejá tu comentario"}
+        </button>
+
+        {/* Formulario para ingresar comentario */ }
+
+        {mostrarFormulario && (
+        <div className="formulario-comentario">
+          <textarea
+            rows="3"
+            value={comentario}
+            onChange={(e) => setComentario(e.target.value)}
+            placeholder="Escribí tu comentario..."
+          />
+          <button onClick={manejarEnvio}>Enviar</button>
+        </div>
+          )}
       </div>
     </div>
+
   );
 };
 
