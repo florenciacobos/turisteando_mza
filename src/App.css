@@ -295,7 +295,7 @@ nav button:disabled {
 }
 
 .menu-header {
-  margin-bottom: 5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -347,6 +347,18 @@ nav button:disabled {
 .menu-list li.active {
   background-color: #d6efff;
   font-weight: 600;
+}
+
+.back-arrow-menu {
+  cursor: pointer;
+  color: #8e3b30;
+  transition: transform 0.2s;
+  margin: 10px;
+}
+
+.back-arrow-menu:hover {
+  transform: scale(1.2);
+  color: #732d24;
 }
 
 /*LOGIN*/
@@ -434,6 +446,20 @@ nav button:disabled {
   background-color: #732d24;
 }
 
+.back-arrow {
+  position: absolute; /* ← Esto es clave */
+  top: 25px;
+  left: 35px;
+  cursor: pointer;
+  color: #8e3b30;
+  transition: transform 0.2s;
+  font-size: 1.5rem; /* opcional para agrandar la flecha */
+}
+
+.back-arrow:hover {
+  transform: scale(1.1);
+}
+
 /*REGISTRAR*/
 .register-container {
   max-width: 400px;
@@ -461,6 +487,7 @@ nav button:disabled {
 
 .register-input {
   flex: 1;
+  min-width: 0;
   padding: 0.6rem 0.8rem;
   border: 1px solid #bfa996;
   border-radius: 6px;
@@ -513,6 +540,18 @@ nav button:disabled {
   text-decoration: underline;
 }
 
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  color: #5d2120;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #bfa996;
+  border-radius: 6px;
+  width: 100%;
+  font-family: inherit;
+}
 
 /* VISTA LUGAR */
 
