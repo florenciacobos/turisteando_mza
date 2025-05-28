@@ -1,21 +1,19 @@
 import './App.css';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react'; 
-import ListaUsuarios from './components/ListaUsuarios.jsx';
+import { useState, useEffect } from 'react'; 
 import MapView from './components/OpenLayersMapView';
 import Menu from './Menu'; 
 import perfil from './assets/Perfil.png';
-import { useEffect } from 'react';
 import { fetchPOIs } from './services/poiService.js';
+import { useGeolocation } from './hooks/useGeolocation';
+import ActionBar from './components/ActionBar';
+import ErrorToast from './components/ErrorToast';
 
-
-// Si quieres usar Leaflet en lugar de OpenLayers, descomenta las siguientes líneas
-// import MapView from './components/LeafletMapView.jsx';
-// import 'leaflet/dist/leaflet.css'
 
 function App() {
   const navigate = useNavigate();
   const [pois, setPois] = useState([]);
+  const { location, error, isTracking, startTracking, stopTracking } = useGeolocation();
 
   useEffect(() => {
     async function fetchData() {
@@ -62,31 +60,19 @@ function App() {
         />
       </div>
 
-      {/* Barra de navegación */}
-      {/* <nav className="nav-bar">
-        <button>Mapa</button>
-        <button disabled>Inicio</button>
-        <button disabled>Filtros</button>
-        <button disabled>Perfil</button>
-        <button disabled>Feedback</button>
-        <button disabled>Itinerarios</button>
-        <button disabled>Notificaciones</button>
-      </nav> */}
-
       {/* Mapa */}
       <div className="map-container">
-        <MapView pois={pois} />
+        <MapView pois={pois} location={location} isTracking={isTracking} />
       </div>
 
-      {/* Botón de búsqueda */}
-      <button className="search-button" onClick={() => alert('Buscar')}>
-        🔍
-      </button>
-
-      {/* Botón de lugar */}
-      <button className="search-button" onClick={goToVistaLugar}>
-        Lugar
-      </button>
+      <ActionBar 
+        onSearch={() => alert('Buscar')}
+        onPlaceClick={goToVistaLugar}
+        onLocationClick={isTracking ? stopTracking : startTracking}
+        isLocationTracking={isTracking}
+      />
+      
+      <ErrorToast message={error} />
 
       {/* Botón Sugerencias */}
       {/* <button className="search-button" onClick={goToSugerencias}>
