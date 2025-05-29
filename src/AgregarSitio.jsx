@@ -1,17 +1,10 @@
-import React, { useState } from "react";
-import {
-  Box,
-  TextField,
-  Button,
-  Card,
-  CardContent,
-  Typography,
-  IconButton,
-} from "@mui/material";
-import { PhotoCamera, Edit } from "@mui/icons-material";
+import React, { useState, useEffect } from "react";
+import { Box, TextField, Card, CardContent, Typography } from "@mui/material";
+import { PhotoCamera} from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import Autocomplete from "@mui/material/Autocomplete";
 import "./App.css";
-// import { supabase } from '../supabaseClient'; // Asegurate de tener esto configurado
+import { subirLugarConFoto } from "./lib/lugarService";
 
 export default function AgregarSitio() {
   const [imagen, setImagen] = useState(null);
@@ -19,11 +12,52 @@ export default function AgregarSitio() {
   const [nombre, setNombre] = useState("");
   const [descripcion, setDescripcion] = useState("");
 
+  /* categorias q deberian estar cargadas en la bd */
+  const options = [
+    "Actividades recreativas",
+    "Bodegas",
+    "Gastronomía",
+    "Lugares de esparcimiento",
+    "Mall/Centro comercial",
+    "Sitios patrimoniales",
+  ];
+  const [value, setValue] = React.useState(options[0]);
+  const [inputValue, setInputValue] = React.useState("");
+
+  const [latitud, setLatitud] = useState(null);
+  const [longitud, setLongitud] = useState(null);
+
+  useEffect(() => {
+    //obtener la lat y long de la ubicacion actual del usuario
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLatitud(position.coords.latitude);
+          setLongitud(position.coords.longitude);
+          console.log(
+            "Ubicación actual:",
+            position.coords.latitude,
+            position.coords.longitude
+          );
+        },
+        (error) => {
+          console.error("Error al obtener la ubicación:", error);
+          alert(
+            "No se pudo obtener tu ubicación. Activá el GPS o los permisos de ubicación."
+          );
+        }
+      );
+    } else {
+      alert("Tu navegador no soporta la geolocalización.");
+    }
+  }, []);
+
   const navigate = useNavigate();
   const handleBack = () => {
     navigate("/");
   };
 
+  //al cargar una imagen la muestra
   const handleImagenChange = (e) => {
     const file = e.target.files[0];
     setImagen(file);
@@ -31,43 +65,31 @@ export default function AgregarSitio() {
   };
 
   const handleAgregar = async () => {
-    if (!nombre || !descripcion || !imagen) {
-      alert("Completa todos los campos");
+    if (!nombre || !descripcion || !imagen || !latitud || !longitud) {
+      alert("Completa todos los campos y activa la ubicación");
       return;
     }
 
-    /* // Subir imagen a Supabase Storage
-    const { data: imgData, error: imgError } = await supabase.storage
-      .from('imagenes') // nombre del bucket en Supabase
-      .upload(`sitios/${imagen.name}`, imagen);
+    const resultado = await subirLugarConFoto({
+      nombre,
+      descripcion,
+      categoria: value,
+      archivoFoto: imagen,
+      latitud,
+      longitud,
+    });
 
-    if (imgError) {
-      console.error(imgError);
-      alert('Error al subir la imagen');
-      return;
-    }
-
-    const imagenUrl = `https://<tu-proyecto>.supabase.co/storage/v1/object/public/imagenes/${imgData.path}`;
-
-    // Guardar info en la base de datos
-    const { error } = await supabase.from('sitios').insert([
-      {
-        nombre,
-        descripcion,
-        imagen_url: imagenUrl,
-      },
-    ]);
-
-    if (error) {
-      console.error(error);
-      alert('Error al guardar en la base de datos');
-    } else {
-      alert('Sitio agregado correctamente');
+    if (resultado.success) {
+      alert("Sitio agregado correctamente");
+      setNombre("");
+      setDescripcion("");
       setImagen(null);
       setPreview(null);
-      setNombre('');
-      setDescripcion('');
-    }*/
+      setValue(options[0]);
+      setInputValue("");
+    } else {
+      alert("Error: " + resultado.error);
+    }
   };
 
   return (
@@ -102,7 +124,7 @@ export default function AgregarSitio() {
               htmlFor="upload-img"
               sx={{
                 width: "70vw",
-                height: 150,
+                height: 200,
                 backgroundColor: "#ddd",
                 borderRadius: 5,
                 overflow: "hidden",
@@ -142,6 +164,24 @@ export default function AgregarSitio() {
                 onChange={(e) => setNombre(e.target.value)}
                 sx={{ mb: 2 }}
               />
+
+              <div>
+                <Typography variant="subtitle1">Categoría</Typography>
+                <Autocomplete
+                  value={value}
+                  onChange={(event, newValue) => {
+                    setValue(newValue);
+                  }}
+                  inputValue={inputValue}
+                  onInputChange={(event, newInputValue) => {
+                    setInputValue(newInputValue);
+                  }}
+                  id="controllable-states-demo"
+                  options={options}
+                  sx={{ width: "67vw" }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </div>
 
               <Typography variant="subtitle1">Descripción</Typography>
               <TextField
