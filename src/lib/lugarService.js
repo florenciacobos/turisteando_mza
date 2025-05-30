@@ -40,7 +40,7 @@ export const subirLugarConFoto = async ({ nombre, descripcion, latitud, longitud
 
     if (errorLugar) throw new Error('Error al insertar lugar: ' + errorLugar.message);
 
-    const lugarId = lugarInsertado[41].id;
+    const lugarId = lugarInsertado[0].id;
 
     // 3. Insertar foto con relación al lugar
     // const { error: errorFoto } = await supabase
