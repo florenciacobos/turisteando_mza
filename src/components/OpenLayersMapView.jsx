@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'ol/ol.css';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
@@ -9,12 +10,13 @@ import Point from 'ol/geom/Point';
 import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
 import { Style, Icon, Circle as CircleStyle, Fill, Stroke } from 'ol/style';
-import { useGeolocation } from '../hooks/useGeolocation';
+import Select from 'ol/interaction/Select';
 
 const OpenLayersMapView = ({ pois, location, isTracking }) => {
   console.log('[DEBUG] Renderizando OpenLayersMapView');
   const mapRef = useRef(null);
   const [map, setMap] = useState(null);
+  const navigate = useNavigate();
 
   // Referencia a las features de ubicación
   const locationFeature = useRef(new Feature());
@@ -40,10 +42,12 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
     });
 
     // Crear capa de POIs
-    const features = pois.map((poi) => {
+    const poisFeatures = pois.map((poi) => {
       const feature = new Feature({
         geometry: new Point(fromLonLat([poi.lng, poi.lat])),
+        poi: poi // Store POI data in feature for click handling
       });
+
       feature.setStyle(
         new Style({
           image: new Icon({
@@ -56,7 +60,7 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
     });
 
     const poiLayer = new VectorLayer({
-      source: new VectorSource({ features }),
+      source: new VectorSource({ features: poisFeatures }),
     });
 
     // Crear mapa
@@ -73,9 +77,30 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
       }),
     });
 
+    // Manejar clics en el mapa
+    const selectClick = new Select({
+      condition: (event) => event.type === 'singleclick',
+      layers: [poiLayer], // Solo queremos seleccionar en la capa de POIs
+    });
+
+    selectClick.on('select', (e) => {
+      if (e.selected.length > 0) {
+        const feature = e.selected[0];
+        const poi = feature.get('poi');
+        console.log('POI seleccionado:', poi);
+        // Navegar a la página del lugar usando external_id
+        navigate(`/place/${poi.id}`);
+      }
+    });
+
+    mapInstance.addInteraction(selectClick);
+
     setMap(mapInstance);
 
-    return () => mapInstance.setTarget(null);
+    return () => {
+      mapInstance.setTarget(null);
+      mapInstance.removeInteraction(selectClick);
+    };
   }, [pois]);
 
   // Actualizar ubicación en el mapa
