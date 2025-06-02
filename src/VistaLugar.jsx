@@ -243,84 +243,52 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="container-comentarios">
-        {/* Comentario 1 */}
-        <Card
-          variant="outlined"
-          sx={{
-            width: "40vw",
-            // to make the card resizable
-            overflow: "auto",
-            resize: "horizontal",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Avatar>CG</Avatar>
-            <Typography level="title-lg">Camila Gómez</Typography>
-          </Box>
-          <CardContent>
-            <Typography level="body-sm">
-              Es un lugar increible para poder relajarse y pasarlo con familia.
-              Recomendadísimo!!
-            </Typography>
-          </CardContent>
-        </Card>
 
-        {/* Comentario 2 */}
-        <Card
-          variant="outlined"
-          sx={{
-            display: "flex",
-            width: "40vw",
-            // to make the card resizable
-            overflow: "auto",
-            resize: "horizontal",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Avatar>JS</Avatar>
-            <Typography level="title-lg">Jack Ross</Typography>
-          </Box>
-          <CardContent>
-            <Typography level="body-sm">
-              It is an incredible place to relax and spend time with family.
-              Highly recommended!
-            </Typography>
-          </CardContent>
-        </Card>
+      <div className="container-comentarios">
 
         {/* Botón para mostrar/ocultar formulario de comentario  */}
-        <button className="boton-comentario" onClick={toggleFormulario}>
+        <button className="btn_dejar_comentario" onClick={toggleFormulario}>
           {mostrarFormulario ? "Cancelar comentario" : "Dejá tu comentario"}
         </button>
 
-        {/* Formulario para ingresar comentario */ }
+        {/* Formulario para ingresar comentario */}
 
         {mostrarFormulario && (
-        <div className="formulario-comentario">
-          <textarea
-            rows="3"
-            value={comentario}
-            onChange={(e) => setComentario(e.target.value)}
-            placeholder="Escribí tu comentario..."
-          />
-          <button onClick={manejarEnvio}>Enviar</button>
-        </div>
-          )}
+          <div className="formulario-comentario">
+            <textarea className="textArea-comentario"
+              rows="3"
+              value={comentario}
+              onChange={(e) => setComentario(e.target.value)}
+              placeholder="Escribí tu comentario..."
+            />
+            <button className="btn_enviar_comentario" onClick={manejarEnvio}>Enviar</button>
+          </div>
+        )}
+
+
+        
+        
+
+
+
       </div>
     </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   );
 };
