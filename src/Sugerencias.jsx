@@ -1,34 +1,8 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import sugerencias from "./data/lugares";
 
 // import mockPOIs from "./data/mockPOIs.js";
-
-
-const sugerencias = [
-    {
-        id: 1,
-        nombre: 'Parque General San Martín',
-        categoria: 'Lugares de esparcimiento',
-        direccion: 'Av. Emilio Civit 701, Ciudad, Mendoza',
-        descripcion:
-            'Es el parque más emblemático de Mendoza, ideal para caminatas, picnics y actividades al aire libre.',
-        distancia: 1.4,
-        imagen: 'https://billiken.lat/wp-content/uploads/2022/01/portones.jpeg',
-    },
-    {
-        id: 2,
-        nombre: 'Bodega López',
-        categoria: 'Bodegas',
-        direccion: 'Ozamis Sur 375, Maipú',
-        descripcion:
-            'Tradicional bodega mendocina con degustaciones y visitas guiadas.',
-        distancia: 4.5,
-        imagen: 'https://mendoza.tur.ar/wp-content/uploads/2021/12/Frente-Bodega-noche-8-13.jpg',
-    },
-];
-
-
 
 const Sugerencias = () => {
     const [categorias, setCategorias] = useState([]);
@@ -51,6 +25,10 @@ const Sugerencias = () => {
             prev.includes(value) ? prev.filter((d) => d !== value) : [...prev, value]
         );
     };
+
+    const [favoritos, setFavoritos] = React.useState(() => {
+        return JSON.parse(localStorage.getItem("favoritos")) || [];
+    });
 
     const handleBack = () => {
         navigate("/");
@@ -79,6 +57,18 @@ const Sugerencias = () => {
 
         return categoriaMatch && distanciaMatch;
     });
+
+    const toggleFavorito = (nombreLugar) => {
+        let nuevosFavoritos;
+        if (favoritos.includes(nombreLugar)) {
+            nuevosFavoritos = favoritos.filter(item => item !== nombreLugar);
+        } else {
+            nuevosFavoritos = [...favoritos, nombreLugar];
+        }
+        setFavoritos(nuevosFavoritos);
+        localStorage.setItem("favoritos", JSON.stringify(nuevosFavoritos));
+    };
+
 
     return (
         <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
@@ -200,15 +190,29 @@ const Sugerencias = () => {
                                             </span>
                                         </div>
 
-                                        <div className="container-input mt-2">
-                                            <label className="flex items-center space-x-2 cursor-pointer">
+                                        <div className="container-input mt-2 flex flex-row flex-wrap justify-center items-center gap-4">
+                                            <label className="flex items-center space-x-2 cursor-pointer px-3 py-2 bg-white rounded-md shadow-sm">
                                                 <input
-                                                    type="checkbox"
-                                                    checked={estaVisitado}
-                                                    onChange={toggleVisitado}
-                                                    className="w-4 h-4 accent-[#a9443d]"
+                                                type="checkbox"
+                                                checked={estaVisitado}
+                                                onChange={toggleVisitado}
+                                                className="w-4 h-4 accent-[#a9443d]"
                                                 />
-                                                <span className="text-sm text-[#3b3b3b] font-medium">Marcar como visitado</span>
+                                                <span className="text-sm text-[#3b3b3b] font-medium">
+                                                Marcar como visitado
+                                                </span>
+                                            </label>
+
+                                            <label className="flex items-center space-x-2 cursor-pointer px-3 py-2 bg-white rounded-md shadow-sm">
+                                                <input
+                                                type="checkbox"
+                                                checked={favoritos.includes(lugar.nombre)}
+                                                onChange={() => toggleFavorito(lugar.nombre)}
+                                                className="w-4 h-4 accent-[#a9443d]"
+                                                />
+                                                <span className="text-sm text-[#3b3b3b] font-medium">
+                                                Marcar como favorito
+                                                </span>
                                             </label>
                                         </div>
                                     </div>

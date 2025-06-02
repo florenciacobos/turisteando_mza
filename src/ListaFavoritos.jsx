@@ -1,27 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import mockPOIs from "./data/mockPOIs.js";
+import sugerencias from "./data/lugares";
 
-const Favoritos = () => {
+const ListaFavoritos = () => {
   const navigate = useNavigate();
   const [favoritos, setFavoritos] = useState([]);
 
-  useEffect(() => {
-    const favs = JSON.parse(localStorage.getItem("favoritos")) || [];
-    const lugaresFavoritos = mockPOIs.filter((lugar) =>
-      favs.includes(lugar.name)
+  // Obtener lugares favoritos desde localStorage y filtrar los datos
+  const obtenerFavoritos = () => {
+    const favoritosGuardados = JSON.parse(localStorage.getItem("favoritos")) || [];
+    const lugaresFavoritos = sugerencias.filter((lugar) =>
+      favoritosGuardados.includes(lugar.nombre)
     );
     setFavoritos(lugaresFavoritos);
+  };
+
+  useEffect(() => {
+    obtenerFavoritos();
   }, []);
+
+  // Eliminar un lugar de favoritos
+  const eliminarFavorito = (nombreLugar) => {
+    const nuevosFavoritos = (JSON.parse(localStorage.getItem("favoritos")) || []).filter(
+      (nombre) => nombre !== nombreLugar
+    );
+    localStorage.setItem("favoritos", JSON.stringify(nuevosFavoritos));
+    obtenerFavoritos();
+  };
 
   const handleBack = () => {
     navigate("/");
   };
 
+  const goToVistaLugar = () => {
+    navigate("/lugar");
+  };
+
   return (
     <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
       <div className="header-vista-lugar">
-        {/* Flecha para volver al inicio*/}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -39,36 +56,59 @@ const Favoritos = () => {
       </div>
 
       <h2 className="text-xl font-semibold mb-4 text-center text-[#3b3b3b]">
-        LISTA DE FAVORITOS
+        LUGARES FAVORITOS
       </h2>
 
       {favoritos.length === 0 ? (
-        <p className="text-center text-gray-500">La lista está vacía</p>
+        <p className="text-center text-gray-500">
+          Todavía no marcaste ningún lugar como favorito.
+        </p>
       ) : (
-        <div className="card-lugar space-y-6">
+        <div className="space-y-6">
           {favoritos.map((lugar) => (
             <div
               key={lugar.id}
-              className="card-sombra bg-white rounded-2xl p-4 flex shadow-md space-x-4 lugar-card"
+              className="bg-white rounded-3xl p-4 flex shadow-md lugar-card space-x-4 items-center"
             >
               <img
-                src="https://billiken.lat/wp-content/uploads/2022/01/portones-768x455.jpeg"
-                alt={lugar.name}
-                className="rounded-xl w-32 h-32 object-cover"
+                src={lugar.imagen}
+                alt={lugar.nombre}
+                className="rounded-xl w-80 h-80 object-cover"
+                onClick={goToVistaLugar}
               />
-              <div className="flex flex-col justify-between flex-1">
+
+              <div className="flex flex-col flex-1 space-y-1">
                 <div className="card-contenido">
-                  <h3 className="text-lg font-semibold text-[#3b3b3b]">
-                    {lugar.name}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-[#3b3b3b]">{lugar.nombre}</h3>
+
+                  <p className="text-sm text-[#3b3b3b]">{lugar.categoria}</p>
+
                   <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
                     <p className="text-gray-500 font-semibold">Dirección</p>
-                    <p className="text-[#3b3b3b]">Av. Emilio Civit 701, Ciudad, Mendoza</p>
+                    <p className="text-[#3b3b3b]">{lugar.direccion}</p>
                   </div>
                   <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
                     <p className="text-gray-500 font-semibold">Descripción</p>
-                    <p className="text-[#3b3b3b]">{lugar.description}</p>
+                    <p className="text-[#3b3b3b]">{lugar.descripcion}</p>
                   </div>
+                  <div className="bg-[#f7f4f1] rounded-xl p-2 mt-2 text-sm">
+                    <p className="text-gray-500 font-semibold">Distancia</p>
+                    <p className="text-[#3b3b3b]">{lugar.distancia} km</p>
+                  </div>
+                </div>
+                <div className="flex mt-2 space-x-2">
+                  <button
+                    onClick={() => eliminarFavorito(lugar.nombre)}
+                    className="bg-[#a97300] text-white px-3 py-1 rounded-full text-sm hover:bg-yellow-700"
+                  >
+                    Eliminar de favoritos
+                  </button>
+                  <button
+                    onClick={() => navigate("/sugerencias")}
+                    className="bg-[#4caf50] text-white px-3 py-1 rounded-full text-sm hover:bg-green-700"
+                  >
+                    Agregar más
+                  </button>
                 </div>
               </div>
             </div>
@@ -79,4 +119,4 @@ const Favoritos = () => {
   );
 };
 
-export default Favoritos;
+export default ListaFavoritos;
