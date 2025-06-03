@@ -1,4 +1,4 @@
-import { supabase } from './supabaseClient';
+import { supabase } from './lib/supabaseClient';
 
 // Filtro por categoría
 // Esta funcion recibe el id de la categoria y devuelve los lugares que pertenecen a esa categoria

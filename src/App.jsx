@@ -31,6 +31,10 @@ function App() {
     navigate('/lugar');
   };
 
+  const goToVistaBusqueda = () => {
+    navigate('/busqueda');
+  }
+
   // const goToSugerencias = () => {
   //   navigate('/sugerencias');
   // };
@@ -66,7 +70,7 @@ function App() {
       </div>
 
       <ActionBar 
-        onSearch={() => alert('Buscar')}
+        onSearch={goToVistaBusqueda}
         onPlaceClick={goToVistaLugar}
         onLocationClick={isTracking ? stopTracking : startTracking}
         isLocationTracking={isTracking}

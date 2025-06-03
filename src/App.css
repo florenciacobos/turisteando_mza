@@ -278,6 +278,16 @@ nav button:disabled {
   background-color: var(--color-primary-dark);
 }
 
+.search-field {
+  width: 70%;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--color-text-default);
+  background-color: var(--clr-neutral-100);
+}
+
 /*MENU*/
 .sidebar {
   position: fixed;

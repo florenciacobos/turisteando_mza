@@ -10,6 +10,7 @@ import ListaLugarVisitado from './ListaLugarVisitado.jsx';
 import Sugerencias from './Sugerencias.jsx';
 import AgregarSitio from './AgregarSitio.jsx';
 import PlacePage from './PlacePage.jsx';
+import VistaBusqueda from './VistaBusqueda.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/visitados" element={<ListaLugarVisitado />} />
         <Route path="/agregar" element={<AgregarSitio />} />
         <Route path="/place/:placeId" element={<PlacePage />} />
+        <Route path="/busqueda" element={<VistaBusqueda />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
