@@ -19,7 +19,7 @@ import { supabase } from './supabaseClient'
 // };
 
 // Función principal para cargar lugar + foto (+ categoría opcional)
-export const subirLugarConFoto = async ({ nombre, descripcion, latitud, longitud }) => {
+export const subirLugarConFoto = async ({ nombre, descripcion, latitud, longitud, categoria }) => {
   try {
     const fecha = new Date().toISOString();
     // const nombreArchivo = `${nombre}-${Date.now()}`.replace(/\s/g, '_');
@@ -63,6 +63,25 @@ export const subirLugarConFoto = async ({ nombre, descripcion, latitud, longitud
 
     //   if (errorCategoria) throw new Error('Error al insertar categoría: ' + errorCategoria.message);
     // }
+
+    // 2. Crear POI en la tabla point_of_interest
+    const { error: errorPOI } = await supabase
+      .from('point_of_interest')
+      .insert({
+        source: 'user',
+        external_id: lugarId.toString(),
+        name: nombre,
+        description: descripcion,
+        geo: {
+          type: 'Point',
+          coordinates: [longitud, latitud]
+        },
+        kinds: [categoria],
+        created_by: null, // TODO: Agregar el ID del usuario cuando se implemente autenticación
+        ts: fecha
+      });
+
+    if (errorPOI) throw new Error('Error al crear POI: ' + errorPOI.message);
 
     return { success: true, lugarId };
   } catch (error) {

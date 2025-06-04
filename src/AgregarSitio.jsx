@@ -80,13 +80,14 @@ export default function AgregarSitio() {
     });
 
     if (resultado.success) {
-      alert("Sitio agregado correctamente");
+      // alert("Sitio agregado correctamente");
       setNombre("");
       setDescripcion("");
       setImagen(null);
       setPreview(null);
       setValue(options[0]);
       setInputValue("");
+      navigate("/");
     } else {
       alert("Error: " + resultado.error);
     }
