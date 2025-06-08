@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from './lib/supabaseClient';
+import ErrorToast from './components/ErrorToast';
 
 const PlacePage = () => {
   const { placeId } = useParams();
@@ -52,11 +53,7 @@ const PlacePage = () => {
   }
 
   if (error) {
-    return (
-      <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
-        <p className="text-center text-red-500">{error}</p>
-      </div>
-    );
+    return <ErrorToast message={error} />;
   }
 
   if (!place) return null;
