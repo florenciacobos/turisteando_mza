@@ -43,6 +43,7 @@ export default defineConfig({
   //! == Development only to solve CORS issues ==
   //! This is a temporary solution for development purposes only.
   server: {
+    historyApiFallback: true,
     proxy: {
       '/opentripmap': {
         target: 'https://api.opentripmap.com/0.1/en',

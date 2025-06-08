@@ -1,5 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import Button from '@mui/material/Button';
 import 'ol/ol.css';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
@@ -16,6 +21,8 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
   console.log('[DEBUG] Renderizando OpenLayersMapView');
   const mapRef = useRef(null);
   const [map, setMap] = useState(null);
+  const [selectedPoi, setSelectedPoi] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   // Referencia a las features de ubicación
@@ -88,8 +95,8 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
         const feature = e.selected[0];
         const poi = feature.get('poi');
         console.log('POI seleccionado:', poi);
-        // Navegar a la página del lugar usando external_id
-        navigate(`/place/${poi.id}`);
+        setSelectedPoi(poi);
+        setIsModalOpen(true);
       }
     });
 
@@ -134,7 +141,31 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
     }
   }, [location, map, isTracking]);
 
-  return <div ref={mapRef} style={{ width: '100%', height: '100%' }}></div>;
+  const handleClose = () => setIsModalOpen(false);
+  const handleNavigate = () => {
+    if (selectedPoi) {
+      navigate(`/place/${selectedPoi.id}`);
+      setIsModalOpen(false);
+    }
+  };
+
+  return (
+    <>
+      <div ref={mapRef} style={{ width: '100%', height: '100%' }}></div>
+      <Dialog open={isModalOpen} onClose={handleClose}>
+        <DialogTitle>{selectedPoi?.name}</DialogTitle>
+        <DialogContent>
+          <p>{selectedPoi?.description || 'Sin descripción disponible'}</p>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleNavigate} variant="contained" color="primary">
+            Ver más
+          </Button>
+          <Button onClick={handleClose}>Cerrar</Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
 };
 
 export default OpenLayersMapView;
