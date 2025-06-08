@@ -106,7 +106,7 @@ const PlacePage = () => {
 
     const resultado = await subirComentario({
       id_usuario,
-      id_lugar: place.id,
+      poi_id: place.id,
       comentario,
     });
 
@@ -119,14 +119,10 @@ const PlacePage = () => {
     setComentario('');
     setMostrarFormulario(false);
 
-    const { data, error: errorComentarios } = await supabase
-      .from('comentario')
-      .select('*')
-      .eq('id_lugar', place.id)
-      .order('fecha_creacion', { ascending: false });
-
-    if (!errorComentarios) {
-      setComentarios(data);
+    // Recargar comentarios
+    const res = await obtenerComentariosPorLugar(place.id);
+    if (res.success) {
+      setComentarios(res.comentarios);
     }
   };
 
@@ -149,6 +145,20 @@ const PlacePage = () => {
     { src: 'https://placehold.co/600x400?text=Imagen+2' },
     { src: 'https://placehold.co/600x400?text=Imagen+3' },
   ];
+
+  const listadoComentarios = comentarios.map((c, index) => (
+    <div key={c.id ?? index} className="comentario">
+      <Card variant="outlined" sx={{ mb: 1 }}>
+        <CardContent>
+          <Typography level="body1">{c.comment_text}</Typography>
+          <Typography level="body3" sx={{ mt: 1, fontSize: '0.75rem', color: 'gray' }}>
+            {new Date(c.created_at).toLocaleString()}
+            {c.user_name && ` - ${c.user_name}`}
+          </Typography>
+        </CardContent>
+      </Card>
+    </div>
+  ));
 
   return (
     <div className="container-vista-lugar">
@@ -230,19 +240,7 @@ const PlacePage = () => {
         <div className="lista-comentarios">
           <h4>Comentarios:</h4>
           {comentarios.length === 0 && <p>Este lugar aún no tiene comentarios.</p>}
-          {comentarios.map((c, index) => (
-            <div key={c.id_comentario ?? index} className="comentario">
-              <Card variant="outlined" sx={{ mb: 1 }}>
-                <CardContent>
-                  <Typography level="body1">{c.comentario}</Typography>
-                  <Typography level="body3" sx={{ mt: 1, fontSize: '0.75rem', color: 'gray' }}>
-                    {new Date(c.fecha_creacion).toLocaleString()}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
-
+          {listadoComentarios}
         </div>
       </div>
     </div>
