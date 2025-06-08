@@ -21,3 +21,7 @@ Environment variables are required for API access:
 ## Documentation
 
 Planning and requirements documentation can be found in the [llm-context](./llm-context/README.md) folder.
+
+### Routes
+
+The SPA uses React Router. Each POI on the map links to `/place/:placeId`, which renders a detailed view for that location.
