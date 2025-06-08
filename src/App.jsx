@@ -7,6 +7,7 @@ import perfil from './assets/Perfil.png';
 import { fetchPOIs } from './services/poiService.js';
 import { useGeolocation } from './hooks/useGeolocation';
 import ActionBar from './components/ActionBar';
+import ActionButton from './components/ActionButton';
 import ErrorToast from './components/ErrorToast';
 
 
@@ -67,13 +68,17 @@ function App() {
       {/* Mapa */}
       <div className="map-container">
         <MapView pois={pois} location={location} isTracking={isTracking} />
+        <ActionButton
+          onClick={isTracking ? stopTracking : startTracking}
+          icon={isTracking ? '🔴' : '📍'}
+          label={isTracking ? 'Detener seguimiento' : 'Mi ubicación'}
+          className="location-button"
+        />
       </div>
 
-      <ActionBar 
+      <ActionBar
         onSearch={goToVistaBusqueda}
         onPlaceClick={goToVistaLugar}
-        onLocationClick={isTracking ? stopTracking : startTracking}
-        isLocationTracking={isTracking}
       />
       
       <ErrorToast message={error} />
