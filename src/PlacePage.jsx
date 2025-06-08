@@ -208,9 +208,15 @@ const PlacePage = () => {
       </div>
 
       <div className="container-direccion">
-        <h6>Ubicación</h6>
+        {/* TODO: Crear un Address schema table en supabase para almacenar las direcciones textuales de cada POI */}
+        <h6>Dirección</h6>
+        <p>{'❌ Dirección no disponible'}</p>
+      </div>
+
+      <div className="container-coordenadas">
+        <h6>Coordenadas</h6>
         <p>
-          {place.lat ? `Latitud: ${place.lat.toFixed(6)}, Longitud: ${place.lng.toFixed(6)}` : 'Ubicación no disponible'}
+          {place.lat ? `Latitud: ${place.lat.toFixed(6)}, Longitud: ${place.lng.toFixed(6)}` : 'Coordenadas no disponible'}
         </p>
       </div>
 

@@ -642,7 +642,7 @@ input[type="date"] {
   border-radius: 2vw;
 }
 
-.container-direccion, .container-descripcion {
+.container-direccion, .container-descripcion, .container-coordenadas {
   margin: 5vw;
   padding: 2vw 5vw;
   text-align: start;
