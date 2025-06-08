@@ -7,7 +7,7 @@ import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import { supabase } from './lib/supabaseClient';
 import ErrorToast from './components/ErrorToast';
-import { subirComentario, obtenerComentariosPorLugar } from './lib/comentarioService';
+import { subirComentario, obtenerComentariosPorLugar } from './lib/poiCommentService';
 import './App.css';
 
 const PlacePage = () => {

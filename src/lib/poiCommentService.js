@@ -1,16 +1,13 @@
 import { supabase } from './supabaseClient'
 
-export const subirComentario = async ({ id_usuario, id_lugar, comentario }) => {
+export const subirComentario = async ({ id_usuario, poi_id, comentario }) => {
   try {
-    const fecha = new Date().toISOString();
-
     const { error } = await supabase
-      .from('comentario')
+      .from('poi_comment')
       .insert({
-        id_usuario,
-        id_lugar,
-        comentario,
-        fecha_creacion: fecha
+        user_id: id_usuario,
+        poi_id: poi_id,
+        comment_text: comentario,
       });
 
     if (error) throw new Error('Error al insertar comentario: ' + error.message);
@@ -22,13 +19,13 @@ export const subirComentario = async ({ id_usuario, id_lugar, comentario }) => {
   }
 };
 
-export const obtenerComentariosPorLugar = async (id_lugar) => {
+export const obtenerComentariosPorLugar = async (poi_id) => {
   try {
     const { data, error } = await supabase
-      .from('comentario')
-      .select('id_comentario, comentario, fecha_creacion, id_usuario(nombre)')
-      .eq('id_lugar', id_lugar)
-      .order('fecha_creacion', { ascending: false });
+      .from('poi_comment_with_user')
+      .select('*')
+      .eq('poi_id', poi_id)
+      .order('created_at', { ascending: false });
 
     if (error) throw new Error('Error al obtener comentarios: ' + error.message);
 

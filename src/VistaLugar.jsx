@@ -10,8 +10,8 @@ import Avatar from "@mui/joy/Avatar";
 import CardContent from "@mui/joy/CardContent";
 import { useState, useEffect } from "react";
 import { supabase } from "./lib/supabaseClient"; // Asegúrate que este archivo esté bien configurado
-import { subirComentario } from "./lib/comentarioService";
-import { obtenerComentariosPorLugar } from "./lib/comentarioService";
+import { subirComentario } from "./lib/poiCommentService.js";
+import { obtenerComentariosPorLugar } from "./lib/poiCommentService.js";
 
 
 const VistaLugar = () => {
