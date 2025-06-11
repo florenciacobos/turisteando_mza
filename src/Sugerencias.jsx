@@ -72,7 +72,7 @@ const Sugerencias = () => {
 
     return (
         <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
-            <div className="header-vista-lugar">
+            <div className="header-vista-lugar header">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"

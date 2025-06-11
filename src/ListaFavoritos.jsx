@@ -38,7 +38,7 @@ const ListaFavoritos = () => {
 
   return (
     <div className="p-5 bg-[#fdf8f3] min-h-screen font-sans">
-      <div className="header-vista-lugar">
+      <div className="header-vista-lugar header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -99,13 +99,13 @@ const ListaFavoritos = () => {
                 <div className="flex mt-2 space-x-2">
                   <button
                     onClick={() => eliminarFavorito(lugar.nombre)}
-                    className="bg-[#a97300] text-white px-3 py-1 rounded-full text-sm hover:bg-yellow-700"
+                    className="btn-vista-favoritos"
                   >
                     Eliminar de favoritos
                   </button>
                   <button
                     onClick={() => navigate("/sugerencias")}
-                    className="bg-[#4caf50] text-white px-3 py-1 rounded-full text-sm hover:bg-green-700"
+                    className="btn-vista-favoritos"
                   >
                     Agregar más
                   </button>

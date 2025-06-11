@@ -223,10 +223,12 @@ nav button:disabled {
 /* Header principal */
 .header {
   width: 85vw;
+  height: 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  margin: auto;
 }
 
 .menu-icon {
@@ -255,7 +257,7 @@ nav button:disabled {
   /* width: 100vw;
   height: 100vh; */
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   position: relative;
   /* margin: 1.5rem 0; */
   border: 2px solid var(--color-border);
@@ -692,6 +694,7 @@ input[type="date"] {
   border-radius: 2vw;
   font-family: var(--ff-body);
   font-size:medium ;
+  border: none;
 }
 
 .formulario-comentario {
@@ -855,4 +858,28 @@ input[type="date"] {
   font-size: 0.875rem;
   border: 1px solid #fecaca;
   max-width: 90vw;
+}
+
+
+.btn-vista-favoritos, .btn-vista-visitados{
+  background-color: #5d2120;
+  color: white;
+  border: none;
+  padding: 10px 20px ;
+  font-size: 3vw;
+  font-weight: 500;            
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 1vw;
+}
+
+.btn-busqueda{
+  background-color: #5d2120;
+  border: none;
+  padding: 3vw;
+  font-size: x-large;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 10vw;
+  right: 5vw;
 }

@@ -36,18 +36,6 @@ function App() {
     navigate('/busqueda');
   }
 
-  // const goToSugerencias = () => {
-  //   navigate('/sugerencias');
-  // };
-
-  // const goToFavoritos = () => {
-  //   navigate('/favoritos');
-  // };
-
-  // const goToVisitados = () => {
-  //   navigate('/visitados');
-  // };
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -75,28 +63,18 @@ function App() {
           className="location-button"
         />
       </div>
-
-      <ActionBar
+      <ActionButton className="btn-busqueda"
+          onClick={goToVistaBusqueda}
+          onPlaceClick={goToVistaLugar}
+          icon="🔍"
+          label="Buscar"
+        />
+      {/* <ActionBar className="btn-busqueda"
         onSearch={goToVistaBusqueda}
         onPlaceClick={goToVistaLugar}
-      />
+      /> */}
       
       <ErrorToast message={error} />
-
-      {/* Botón Sugerencias */}
-      {/* <button className="search-button" onClick={goToSugerencias}>
-        SUG
-      </button>
-
-      {/* Botón de favoritos */}
-      {/* <button className="search-button" onClick={goToFavoritos}>
-        FAV
-      </button> */}
-
-      {/* Botón de visitados */}
-      {/* <button className="search-button" onClick={goToVisitados}>
-        VIS
-      </button> */}
 
       {/* ✅ Menú lateral si está abierto */}
       {isMenuOpen && <Menu closeMenu={() => setIsMenuOpen(false)} />}
