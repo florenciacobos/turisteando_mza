@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import { supabase } from "./lib/supabaseClient"; // Asegúrate que este archivo esté bien configurado
 import { subirComentario } from "./lib/comentarioService";
 import { obtenerComentariosPorLugar } from "./lib/comentarioService";
+import Toast from "./components/ErrorToast.jsx";
 
 
 const VistaLugar = () => {
@@ -57,6 +58,7 @@ const VistaLugar = () => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [comentario, setComentario] = useState("");
   const [comentarios, setComentarios] = useState([]);
+  const [toast, setToast] = useState({ message: '', type: 'success' });
 
   // Cargar comentarios al cargar el componente
   useEffect(() => {
@@ -79,36 +81,33 @@ const VistaLugar = () => {
 
   const manejarEnvio = async () => {
     if (comentario.trim() === "") {
-      alert("El comentario no puede estar vacío");
+      setToast({ message: "El comentario no puede estar vacío", type: "error" });
+      setTimeout(() => setToast({ message: '', type: 'success' }), 5000);
       return;
     }
-
     // Simular un usuario por ahora (en un futuro esto vendría del auth)
     const id_usuario = 2;
-
     const resultado = await subirComentario({
       id_usuario,
       id_lugar: lugarId,
       comentario,
     });
-
     if (!resultado.success) {
       console.error("Error al enviar comentario:", resultado.error);
-      alert("Hubo un error al guardar el comentario");
+      setToast({ message: "Hubo un error al guardar el comentario", type: "error" });
+      setTimeout(() => setToast({ message: '', type: 'success' }), 5000);
       return;
     }
-
     setComentario("");
     setMostrarFormulario(false);
-    alert("¡Comentario enviado con éxito!");
-
+    setToast({ message: "¡Comentario enviado con éxito!", type: "success" });
+    setTimeout(() => setToast({ message: '', type: 'success' }), 5000);
     // Recargar comentarios
     const { data, error } = await supabase
       .from("comentario")
       .select("*")
       .eq("id_lugar", lugarId)
       .order("fecha_creacion", { ascending: false });
-
     if (!error) {
       setComentarios(data);
     }
@@ -196,9 +195,10 @@ const VistaLugar = () => {
           <h4>Comentarios:</h4>
           {comentarios.length === 0 && <p>Este lugar aún no tiene comentarios.</p>}
           {comentarios.map((c, index) => (
-            <div key={c.id ?? index} className="comentario">
+            <div key={c.id_comentario ?? index} className="comentario">
               <Card variant="outlined" sx={{ mb: 1 }}>
                 <CardContent>
+                  <Typography level="body1 nombre-usuario">{c.id_usuario?.nombre || 'Usuario desconocido'}</Typography>
                   <Typography level="body1">{c.comentario}</Typography>
                   <Typography level="body3" sx={{ mt: 1, fontSize: "0.75rem", color: "gray" }}>
                     {new Date(c.fecha_creacion).toLocaleString()}
@@ -210,6 +210,7 @@ const VistaLugar = () => {
 
         </div>
       </div>
+      <Toast message={toast.message} type={toast.type} />
     </div >
   );
 };

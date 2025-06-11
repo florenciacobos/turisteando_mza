@@ -144,7 +144,11 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
   const handleClose = () => setIsModalOpen(false);
   const handleNavigate = () => {
     if (selectedPoi) {
-      navigate(`/place/${selectedPoi.id}`);
+      if (selectedPoi.id === 'N5155445739' || selectedPoi.id === 'N5155445740') {
+        navigate('/lugar');
+      } else {
+        navigate(`/place/${selectedPoi.id}`);
+      }
       setIsModalOpen(false);
     }
   };
@@ -153,9 +157,17 @@ const OpenLayersMapView = ({ pois, location, isTracking }) => {
     <>
       <div ref={mapRef} style={{ width: '100%', height: '100%' }}></div>
       <Dialog open={isModalOpen} onClose={handleClose}>
-        <DialogTitle>{selectedPoi?.name}</DialogTitle>
+        <DialogTitle>{
+          selectedPoi?.id === 'N5155445739' || selectedPoi?.id === 'N5155445740'
+            ? 'Parque General San Martín'
+            : selectedPoi?.name
+        }</DialogTitle>
         <DialogContent>
-          <p>{selectedPoi?.description || 'Sin descripción disponible'}</p>
+          <p>{
+            selectedPoi?.id === 'N5155445739' || selectedPoi?.id === 'N5155445740'
+              ? 'El parque más emblemático de Mendoza, ideal para caminatas y actividades al aire libre.'
+              : (selectedPoi?.description || 'Sin descripción disponible')
+          }</p>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleNavigate} variant="contained" color="primary">

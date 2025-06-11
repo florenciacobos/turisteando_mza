@@ -20,6 +20,7 @@ export default function AgregarSitio() {
     "Lugares de esparcimiento",
     "Mall/Centro comercial",
     "Sitios patrimoniales",
+    "Otros",
   ];
   const [value, setValue] = React.useState(options[0]);
   const [inputValue, setInputValue] = React.useState("");
@@ -65,7 +66,7 @@ export default function AgregarSitio() {
   };
 
   const handleAgregar = async () => {
-    if (!nombre || !descripcion || !imagen || !latitud || !longitud) {
+    if (!nombre || !descripcion || !latitud || !longitud) {
       alert("Completa todos los campos y activa la ubicación");
       return;
     }
@@ -95,7 +96,7 @@ export default function AgregarSitio() {
 
   return (
     <div>
-      <div className="header-vista-lugar">
+      <div className="header-vista-lugar header">
         {/* Flecha para volver al inicio*/}
         <svg
           xmlns="http://www.w3.org/2000/svg"

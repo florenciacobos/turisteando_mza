@@ -1,13 +1,12 @@
 import React from 'react';
 
-const ErrorToast = ({ message }) => {
+const Toast = ({ message, type = 'error' }) => {
   if (!message) return null;
-  
   return (
-    <div className="error-toast">
-      Error: {message}
+    <div className={`toast toast-${type}`}>
+      {message}
     </div>
   );
 };
 
-export default ErrorToast;
+export default Toast;
